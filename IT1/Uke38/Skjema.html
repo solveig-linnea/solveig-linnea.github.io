@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Skjema</title>
+
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+
+  <body>
+    <header>
+      <h1>Spørreskjema</h1>
+      <nav>
+        <ul>
+          <li><a href="Solsystemet.html">Solsystemet</a></li>
+          <li><a href="Sola.html">Sola</a></li>
+          <li><a href="Planeter.html">Planeter</a></li>
+          <li> <a href="skjema.html">Spørreskjema</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <form action="Registrer.html">
+        <label><h3>Undersøkelse</h3></label>
+
+        <label for="inputNavn">Navn:</label>
+        <input id="inputNavn" type="text" name="Navn" placeholder="Skriv inn ditt navn" required>
+
+
+        <label for="inputAlder">Alder:</label>
+        <input id="inputAlder"type="number" name="alder" placeholder="Skriv inn din alder" required>
+<br>
+        <label>Hva er din favoritt planet?</label>
+<br>
+
+        <input id="rbMerkur" type="radio" name="rbPlanet" value="Merkur"><label for="rbMerkur">Merkur</label>
+        <input id="rbVenus" type="radio" name="rbPlanet" value="Venus"><label for="rbVenus">Venus</label>
+        <input id="rbJorda" type="radio" name="rbPlanet" value="jorda"><label for="rbJorda">Jorda</label>
+        <input id="rbMars" type="radio" name="rbPlanet" value="Mars"><label for="rbMars">Mars</label>
+        <input id="rbJupiter" type="radio" name="rbPlanet" value="Jupiter"><label for="rbJupiter">Jupiter</label>
+        <input id="rbSaturn" type="radio" name="rbPlanet" value="Saturn"><label for="rbSaturn">Saturn</label>
+        <input id="rbUranus" type="radio" name="rbPlanet" value="Uranus"><label for="rbUranus">Uranus</label>
+        <input id="rbNeptun" type="radio" name="rbPlanet" value="Neptun"><label for="rbNeptun">Neptun</label>
+
+<br>
+        <button type="submit" name="RegistreringsKnapp">Send Inn</button>
+
+      </form>
+
+
+    </main>
+  </body>
+</html>

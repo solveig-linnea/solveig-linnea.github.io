@@ -1,0 +1,295 @@
+/*Generelle tagger som er like for alle sidene*/
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(189, 173, 136);
+}
+
+header {
+  text-decoration: none;
+  width: 100%;
+  background: #f6f6f6;
+  }
+
+nav {
+  display: grid;
+  grid-template-columns: 50% repeat(4, 10%);
+  align-items: center;
+  scroll-behavior: smooth;
+}
+main {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+footer {
+  background-color: lightgrey;
+  padding: 20px 10px;
+}
+
+footer nav {
+  display: grid;
+  grid-template-columns: 45% 15% repeat(4, 10%);
+  align-items: center;
+  scroll-behavior: smooth;
+}
+video {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: lightgrey;
+}
+
+tbody {
+  background-color: #eee;
+}
+
+th {
+  text-align: left;
+  color: black;
+  padding: 7px;
+  border: 2px solid black;
+  border-bottom: 4px solid black
+}
+
+td {
+  padding: 7px;
+  color: black;
+  border: 2px solid black;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical
+}
+
+input[type=submit] {
+  background-color: grey;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: lightblue;
+}
+
+#logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  width: 20px;
+}
+section{
+  padding: 16;
+  font-size: 16;
+  border: none;
+  cursor: pointer
+}
+/*dropdown*/
+.dropbtn {
+  background-color: #f6f6f6;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 3;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  background-color: lightgrey;
+}
+/*Hovedsiden:
+    -Bakgrunnen*/
+.Bg-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Bg-text {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-weight: bold;
+  font-size: 60px;
+  border: 5px solid #f1f1f1;
+  position: sticky;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 500px;
+  padding: 20px;
+  text-align: center;
+}
+/*Grid til hovedsiden*/
+.hoved {
+  display: grid;
+  grid-template-columns: repeat(6, 16.666%);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+
+.Hbox1 {
+  grid-column: span 3;
+}
+
+.Hbox2 {
+  grid-column: span 3;
+}
+
+.Hbox9 {
+  grid-column: span 3;
+}
+
+.Hbox10 {
+  grid-column: span 3;
+}
+
+.bilde {
+  margin: 5px;
+  border: 1px solid darkgrey;
+  float: left;
+}
+
+.bilde:hover {
+  border: solid black;
+}
+
+.tekst {
+  padding: 15px;
+  text-align: center;
+}
+/*Grid til anbefalinger*/
+.anbefalinger {
+  display: grid;
+  grid-template-columns: 20.666% 20.666% 1% 59.666%;
+}
+.Abox {
+  grid-column: span 4;
+}
+.Abox3{
+  grid-column: 3;
+  grid-row-start:2;
+  grid-row-end: 5;
+}
+.Abox4{
+  grid-column: 4;
+  grid-row-start: 2;
+  grid-row-end: 5;
+}
+/*Grid til filmer*/
+.filmer {
+  display: grid;
+  grid-template-columns: 53% 47%;
+}
+
+.Fbox {
+  grid-column: span 2;
+}
+/*Grid til sjangere*/
+.sjangere {
+  display: grid;
+  grid-template-columns: repeat(4, 25)
+}
+
+.Sbox {
+  grid-column: span 4;
+}
+
+.Sbox9 {
+  grid-column: span 2;
+}
+
+.Sbox10 {
+  grid-column: span 2;
+}
+/*Grid til Krim, men det er den samme som skal brukes på de andre sjanger-sidene*/
+.Krim {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.Kbox {
+  grid-column: span 2;
+}
+/*Grid til kontakt oss siden + kommer snart*/
+.kontakt {
+  display: grid;
+  grid-template-columns: 66.666% 33.333%;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.bgimgKS {
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+}
+.topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+}
+.bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+}
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}

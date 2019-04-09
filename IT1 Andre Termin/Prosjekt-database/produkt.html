@@ -28,7 +28,7 @@
           <a href="contact.html">Contact Us</a>
         </div>
         <div id="logo">
-          <a href="index.html">SAVE THE FIN<img src="index/logo.png" alt=""></a>
+          <a href="index.html">SAVE THE FIN<img src="index/logo.png" alt="Picture of logo"></a>
         </div>
       </header>
       <main>
@@ -38,14 +38,14 @@
       <footer>
         <a href="about.html">OTHERS</a>
         <a href="contact.html">CONTACT US</a>
-        <a href="about.html">HELP</a>
+        <a href="store.html">HELP</a>
       </footer>
 
 
       <script type="text/javascript">
         //referanser til HTML-elementer
         const info = document.getElementById("info");
-        const fler = document.getElementById("fler");
+        const more = document.getElementById("more");
 
         //Kode som henter info ut fra url
         let url_string = window.location.href;
@@ -63,21 +63,18 @@
         const stud = db.ref("produkt/stud");
         const shirt = db.ref("produkt/t-shirt");
         const valgtProdukt = db.ref("produkt/"+id);
-        const kurv = db.ref("kurv");
 
 
 
         //oppstart
         visValgtProdukt();
 
+
         //funskjonsdefinisjoner
         function visValgtProdukt() {
           info.innerHTML = ``
           valgtProdukt.on("value", genererHTML);
         }
-
-
-
 
         function genererHTML(snapshot) {
           let key = snapshot.key;
@@ -102,6 +99,7 @@
               <div id="kjop" onclick="buy('${objekt.id}')"><h7>Add to Shopping Cart</h7></div>
             </article> `
         }
+
       </script>
   </body>
 </html>

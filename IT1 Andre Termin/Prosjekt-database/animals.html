@@ -19,11 +19,8 @@
         </div>
     </header>
     <main>
-
-      <article class="animal-top">
-        <div id="h1-animal">
-          <h1>The Animals of the Sea</h1>
-        </div>
+        <h1>The Animals of the Sea</h1>
+        <article class="animal-top">
         <div>
           <p>Healthy ecosystems depend on plant and animal species as their foundations.
             When a species becomes endangered, it is a sign that the ecosystem is slowly
@@ -38,7 +35,7 @@
         </div>
 
       </article>
-      <button class="tablink" onclick="openPage('animal', this, 'lightgreen')" id="defaultOpen">WHY ANIMALS?</button>
+      <button class="tablink" onclick="openPage('animal', this, 'lightgreen')" id="defaultOpen">ANIMALS</button>
       <button class="tablink" onclick="openPage('turtle', this, 'lightblue')">TURTLE</button>
       <button class="tablink" onclick="openPage('dolphin', this, '#8feadc')" >DOLPHIN</button>
       <button class="tablink" onclick="openPage('shark', this, 'pink')" >SHARK</button>
@@ -101,7 +98,7 @@
           <div>
             <img src="animals/turtle2.jpg" alt="bilde av">
           </div>
-          <div>
+          <div id="animals-text-span">
             <p>Seven different species of sea (or marine) turtles grace our
               ocean waters, from the shallow seagrass beds of the Indian Ocean,
               to the colorful reefs of the Coral Triangle, and even the sandy
@@ -140,7 +137,7 @@
           <div>
             <img src="animals/dolphin2.jpg" alt="Picture of a dolphin">
           </div>
-          <div>
+          <div id="animals-text-span">
             <p>These clever, streamlined mammals are found in most of the world’s
               oceans, including around the UK. By protecting marine dolphins like
               these we’re helping keep our seas healthy – which is good for all the
@@ -172,79 +169,85 @@
       </div>
       <div id="shark" class="tabcontent">
         <div id="animal-tittle">
-          <h3>The Coral</h3>
+          <h3>The Sharks</h3>
         </div>
         <div class="animals-info2">
           <div>
-            <img src="" alt="bilde av">
+            <img src="animals/hai1.jpg" alt="Picture of a shark">
           </div>
           <div>
-            <img src="" alt="bilde av">
+            <img src="animals/hai2.jpg" alt="Picture of a shark">
           </div>
-          <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <div id="animals-text-span">
+            <p>These majestic top predators that are so essential to the natural
+               order of marine ecosystems now face their most severe threat from
+               overfishing. Many species are threatened with extinction, with some
+               families of rays such as sawfishes in peril. While sharks and rays
+               have been an irreplaceable resource for coastal communities in the
+               developing world for centuries, this unique balance is in danger of
+               being lost forever.
             </p>
           </div>
         </div>
         <div class="animals-bilder">
           <div>
-            <h3>1</h3>
-            <img src="" alt="">
+            <h3>Mako Shark</h3>
+            <img src="animals/mako.jpg" alt="Picture of a Mako shark">
           </div>
           <div>
-            <h3>2</h3>
-            <img src="" alt="">
+            <h3>Tiger Shark</h3>
+            <img src="animals/tiger.jpg" alt="Picture of a tiger shark">
           </div>
           <div>
-            <h3>3</h3>
-            <img src="" alt="">
+            <h3>Great White</h3>
+            <img src="animals/great.jpg" alt="Picture of a great white shark">
           </div>
           <div>
-            <h3>4</h3>
-            <img src="" alt="">
+            <h3>Hammerhead</h3>
+            <img src="animals/hammer.jpg" alt="picture of a hammerhead shark">
           </div>
         </div>
       </div>
       <div id="coral" class="tabcontent">
         <div id="animal-tittle">
-          <h3>The Dolphin</h3>
+          <h3>The Corals</h3>
         </div>
         <div class="animals-info2">
           <div>
-            <img src="" alt="bilde av">
+            <img src="animals/coral1.jpg" alt="Picture of coral">
           </div>
           <div>
-            <img src="" alt="bilde av">
+            <img src="animals/coral2.jpg" alt="Picture of coral">
           </div>
-          <div>
+          <div id="animals-text-span">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </div>
         </div>
         <div class="animals-bilder">
           <div>
-            <h3>1</h3>
-            <img src="" alt="">
+            <h3>Staghorn Coral</h3>
+            <img src="animals/stag.jpg" alt="Picture of staghorn coral">
           </div>
           <div>
-            <h3>2</h3>
-            <img src="" alt="">
+            <h3>Black Coral</h3>
+            <img src="animals/black.jpg" alt="Picture of black coral">
           </div>
           <div>
-            <h3>3</h3>
-            <img src="" alt="">
+            <h3>Pillar Coral</h3>
+            <img src="animals/pillar.jpg" alt="Picture of pillar coral">
           </div>
           <div>
-            <h3>4</h3>
-            <img src="" alt="">
+            <h3>Elkhorn Coral</h3>
+            <img src="animals/elk.jpg" alt="Picture of elkhorn coral">
           </div>
         </div>
       </div>
     </main>
     <footer>
-      <a href="#">OTHERS</a>
+      <a href="about.html">OTHERS</a>
       <a href="contact.html">CONTACT US</a>
-      <a href="#">FAQ</a>
+      <a href="store.html">HELP</a>
     </footer>
     <script>
     function openPage(pageName,elmnt,color) {

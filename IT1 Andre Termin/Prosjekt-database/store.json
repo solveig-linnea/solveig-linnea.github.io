@@ -1,0 +1,349 @@
+{
+  "produkt" : {
+    "armband" : {
+      "a001": {
+        "navn" : "4ocean",
+        "undertekst" : "Bracelet",
+        "tekst" : "Did you know that sea turtles travel thousands of miles during their lifetime to reproduce and even return every year to the same beaches where they were born? Did you know that most sea turtles are under threat of extinction? For every bracelet you purchase you will help clean the oceans. Visist 4Oceans for more information.",
+        "pris" : 199,
+        "farge1" : "blaa",
+        "farge2" : "hvit",
+        "bilde" : "armband.png"
+      },
+      "a002" : {
+        "navn" : "Vintage Orange",
+        "undertekst" : "Bracelet",
+        "tekst" : "Did you know that sea turtles travel thousands of miles during their lifetime to reproduce and even return every year to the same beaches where they were born? Did you know that most sea turtles are under threat of extinction? Show your love for turtles and grab one of our new Vintage Turtle Bracelets before they go! These beautiful bracelets make a great gift or addition to any turtle lover's wardrobe. ",
+        "pris" : 119,
+        "farge1" : "oransje",
+        "farge2" : "",
+        "bilde" : "armband1.png"
+      },
+      "a003" : {
+        "navn" : "Vintage Pink",
+        "undertekst" : "Bracelet",
+        "tekst" : "Did you know that sea turtles travel thousands of miles during their lifetime to reproduce and even return every year to the same beaches where they were born? Did you know that most sea turtles are under threat of extinction? Show your love for turtles and grab one of our new Vintage Turtle Bracelets before they go! These beautiful bracelets make a great gift or addition to any turtle lover's wardrobe. ",
+        "pris" : 119,
+        "farge1" : "rosa",
+        "farge2" : "",
+        "bilde" : "armband2.png"
+      },
+      "a004" : {
+        "navn" : "Vintage Black",
+        "undertekst" : "Bracelet",
+        "tekst" : "Did you know that sea turtles travel thousands of miles during their lifetime to reproduce and even return every year to the same beaches where they were born? Did you know that most sea turtles are under threat of extinction? Show your love for turtles and grab one of our new Vintage Turtle Bracelets before they go! These beautiful bracelets make a great gift or addition to any turtle lover's wardrobe. ",
+        "pris" : 119,
+        "farge1" : "sort",
+        "farge2" : "",
+        "bilde" : "armband3.png"
+      },
+      "a005" : {
+        "navn" : "Wave",
+        "undertekst" : "Bracelet",
+        "tekst" :"Sometimes we all just wish to ride the wave with our friends. This bracelet allows you to do that even though your far away from the ocean!",
+        "pris" : 129,
+        "farge1" : "blaa",
+        "farge2" : "solv",
+        "bilde" : "armband4.jpg"
+      },
+      "a006" : {
+        "navn" : "Obsidian",
+        "undertekst" : "Bracelet",
+        "tekst" :"This simple bracelet is perfect for anyone who wants to feel a bit more connected to the ocean than the averegae person.",
+        "pris" : 129,
+        "farge1" : "blaa",
+        "farge2" : "sort",
+        "bilde" : "armband5.jpg"
+      },
+      "a007" : {
+        "navn" : "Vintage Turtle",
+        "undertekst" : "Bracelet",
+        "tekst" :"Our eye-catching Vintage Turquoise Turtle Bracelet is sure to get you compliments! Show your love for turtles by purchasing this product.",
+        "pris" : 149,
+        "farge1" : "blaa",
+        "farge2" : "solv",
+        "bilde" : "armband6.jpg"
+      },
+      "a008" : {
+        "navn" : "Vintage Turtle Bangle",
+        "undertekst" : "Bracelet",
+        "tekst" : "This beautiful bracelet bangle will absolutely catch everyones attantion! Show your love for turtles by purchasing this product.",
+        "pris" : 149,
+        "farge1" : "blaa",
+        "farge2" : "solv",
+        "bilde" : "armband7.jpg"
+      }
+    },
+    "kjede" : {
+      "k001" : {
+        "navn" : "Tibetan Turquoise Turtle Pendant",
+        "undertekst" : "Necklace",
+        "tekst" : "The stunning Tibetan Turquoise Turtle Pendant is one of our most popular products and a beautiful and trendy accessory for turtle lovers!",
+        "pris" : 199,
+        "farge1" : "blaa",
+        "farge2" : "solv",
+        "bilde" : "kjede1.jpg"
+      },
+      "k002" : {
+        "navn" : "Multicolor Sea Turtle Necklace",
+        "undertekst" : "Necklace",
+        "tekst" : "Our Multicolor Sea Turtle Necklace is one of our most popular products and a beautiful and trendy accessory for all you turtle lovers!",
+        "pris" : 199,
+        "farge1" : "gul",
+        "farge2" : "roed",
+        "bilde" : "kjede2.jpg"
+      },
+      "k003" : {
+        "navn" : "Premium Blue Fire Opal Starfish Pendant",
+        "undertekst" : "Necklace",
+        "tekst" : "Our Premium Blue Fire Opal Starfish Pendant is an absolute stunner, capturing the intense beauty and tranquility of the ocean's blue-green depths! Inlaid with blue and green fire opals, and made with premium sterling silver, this limited-edition pendant is simply gorgeous. One look and you'll be transported to the ocean! 😍",
+        "pris" : 169,
+        "farge1" : "blaa",
+        "farge2" : "",
+        "bilde" : "kjede3.jpg"
+      },
+      "k004" : {
+        "navn" : "Stingray",
+        "undertekst" : "Necklace",
+        "tekst" :"The Sting Ray Necklace is a great addition to any ocean lover's wardrobe! With a gorgeus metallic color you will catch everyones attention!",
+        "pris" : 149,
+        "farge1" : "solv",
+        "farge2" : "",
+        "bilde" : "kjede4.jpg"
+      },
+      "k005" : {
+        "navn" : "Turquoise Starfish Pendant",
+        "undertekst" : "Necklace",
+        "tekst" : "Our popular pendant pays homage to one of the ocean's most mysterious and unique creatures! Did you know that many starfish can reproduce both sexually and asexually? That some can regenerate lost arms? Bound to generate compliments, you'll love our Turquoise Starfish Pendant!",
+        "pris" : 169,
+        "farge1" : "blaa",
+        "farge2" : "solv",
+        "bilde" : "kjede5.jpg"
+      },
+      "k006" : {
+        "navn" : "Vintage Globe Pendant",
+        "undertekst" : "Necklace",
+        "tekst" : "Is travel your passion? Keep that love of travel close with our best-selling world map pendant. A classy way to show that you'll never lose your wanderlust",
+        "pris" : 149,
+        "farge1" : "blaa",
+        "farge2" : "",
+        "bilde" : "kjede6.jpg"
+      },
+      "k007" : {
+        "navn" : "Turquoise Turtle Pendant",
+        "undertekst" : "Necklace",
+        "tekst" : "Our beautiful Turquoise Turtle Pendant is sure to get you compliments!",
+        "pris" : 149,
+        "farge1" : "blaa",
+        "farge2" : "solv",
+        "bilde" : "kjede7.jpg"
+      },
+      "k008" : {
+        "navn" : "Blue Fire Opal Dolphin ",
+        "undertekst" : "Necklace",
+        "tekst" : "The Turquoise Collection is our limited-edition collection of premium ocean jewelry. Made with high quality craftsmanship, our Dolphin Necklace was designed by ocean lovers for ocean lovers.",
+        "pris" : 199,
+        "farge1" : "blaa",
+        "farge2" : "solv",
+        "bilde" : "kjede8.jpg"
+      }
+    },
+    "ring" : {
+      "r001" : {
+        "navn" : "Stainless Steel Octopus",
+        "undertekst" : "Ring",
+        "tekst" : "Our best-selling Stainless Steel Octopus Ring is a show-stopper. Made of a silver and black stainless steel base, and with tentacles that adjust seamlessly around your finger, the design of our premium steel octopus ring is a stunner. Compliments guaranteed. ",
+        "pris" : 99,
+        "farge1" : "sort",
+        "farge2" : "solv",
+        "bilde" : "ring1.jpg"
+      },
+      "r002" : {
+        "navn" : "Ocean Hues Stainless Steel Finger Rings",
+        "undertekst" : "Ring",
+        "tekst" : "Miss the ocean? Our adorable 6-piece Ocean Hues Stainless Steel Finger Rings is all the dazzling colors of the ocean on your finger! ",
+        "pris" : 79,
+        "farge1" : "blaa",
+        "farge2" : "solv",
+        "bilde" : "ring2.jpg"
+      },
+      "r003" : {
+        "navn" : "Colors of The Surf",
+        "undertekst" : "Ring",
+        "tekst" : "Our premium ring is inspired by the stunning colors of the ocean surf. So that you never have to feel far from where you feel most at peace: the shores of a beautiful ocean! ",
+        "pris" : 99,
+        "farge1" : "hvit",
+        "farge2" : "blaa",
+        "bilde" : "ring3.jpg"
+      },
+      "r004" : {
+        "navn" : "Ocean Wave Premium Fire Opal Ring",
+        "undertekst" : "Ring",
+        "tekst" : "Sold out!",
+        "pris" : 129,
+        "farge1" : "blaa",
+        "farge2" : "sort",
+        "bilde" : "ring4.jpg"
+      },
+      "r005" : {
+        "navn" : "Delacroix Blue Fire Opal Turtle",
+        "undertekst" : "Ring",
+        "tekst" : "Crafted with a stunning black gold exterior and a blue fire opal interior, our ring is guaranteed to stun. Plus, peer into the stone and you'll see the ocean's beautiful depths! ",
+        "pris" : 129,
+        "farge1" : "blaa",
+        "farge2" : "solv",
+        "bilde" : "ring6.jpg"
+      },
+      "r006" : {
+        "navn" : "Green Premium Fire Opal Starfish Ring",
+        "undertekst" : "Ring",
+        "tekst" : "Our Premium Starfish Ring is a stunning memento to one of the ocean's most unique and mysterious creatures! Did you know that many starfish can reproduce both sexually and asexually? That some can regenerate lost arms? Our premium ring captures the majesty of this wondrous creature!",
+        "pris" : 99,
+        "farge1" : "gronn",
+        "farge2" : "solv",
+        "bilde" : "ring7.jpg"
+      },
+      "r007" : {
+        "navn" : "Blue Premium Fire Opal Starfish Ring",
+        "undertekst" : "Ring",
+        "tekst" : "Our Premium Starfish Ring is a stunning memento to one of the ocean's most unique and mysterious creatures! Did you know that many starfish can reproduce both sexually and asexually? That some can regenerate lost arms? Our premium ring captures the majesty of this wondrous creature!",
+        "pris" : 99,
+        "farge1" : "blaa",
+        "farge2" : "solv",
+        "bilde" : "ring8.jpg"
+      },
+      "r008" : {
+        "navn" : "Sterling Silver Turtle ",
+        "undertekst" : "Ring",
+        "tekst" : "This is a gorgeous Turtle Ring. With sterling silver and blue fire opal you will recieve many compliments!",
+        "pris" : 129,
+        "farge1" : "blaa",
+        "farge2" : "solv",
+        "bilde" : "ring9.jpg"
+      }
+    },
+    "oeredobb" : {
+      "o001" : {
+        "navn" : "Tibetan Turquoise Turtle",
+        "undertekst" : "Earring",
+        "tekst" : "Show your love for turtles with our best-selling earrings! ",
+        "pris" : 99,
+        "farge1" : "blaa",
+        "farge2" : "solv",
+        "bilde" : "oeredobb1.jpg"
+      },
+      "o002" : {
+        "navn" : "Ocean Tides Blue Opal",
+        "undertekst" : "Earring",
+        "tekst" : "Ocean Tides earring set encapsulates the beauty of the ocean. See into the peaceful depths of the ocean with these gorgeous earrings set with blue fire opals. We guarantee you won't want to take them off!",
+        "pris" : 99,
+        "farge1" : "blaa",
+        "farge2" : "solv",
+        "bilde" : "oeredobb2.jpg"
+      },
+      "o003" : {
+        "navn" : "Turtle Vintage Earring",
+        "undertekst" : "Earring",
+        "tekst" : "Love turtles? Grab our adorable Vintage Turtle Earrings while supplies last!",
+        "pris" : 99,
+        "farge1" : "blaa",
+        "farge2" : "solv",
+        "bilde" : "oeredobb3.jpg"
+      },
+      "o004" : {
+        "navn" : "Turquoise Collection",
+        "undertekst" : "Earring",
+        "tekst" : "The Turquoise Collection is our limited-edition collection of premium ocean jewelry. Made with high quality fire opal, our Sea Turtle Studs were designed by ocean lovers for ocean lovers. Gaze at them and you're sure to see the ocean!",
+        "pris" : 99,
+        "farge1" : "blaa",
+        "farge2" : "solv",
+        "bilde" : "oeredobb4.jpg"
+      },
+      "o005" : {
+        "navn" : "Blue Fire Opal Starfish",
+        "undertekst" : "Earring",
+        "tekst" : "Our Blue Fire Opal Starfish Earrings feature gorgeous blue-green fire opals and are filled with sterling silver. Loved by ocean lovers worldwide!",
+        "pris" : 99,
+        "farge1" : "blaa",
+        "farge2" : "solv",
+        "bilde" : "oeredobb5.jpg"
+      },
+      "o006" : {
+        "navn" : "Dolphin Stud Earrings",
+        "undertekst" : "Earring",
+        "tekst" : "Love dolphins as much as we do? Then these beautiful orange, stud earrings are for you! ",
+        "pris" : 99,
+        "farge1" : "organsje",
+        "farge2" : "solv",
+        "bilde" : "oeredobb1.jpg"
+      }
+    },
+    "stud" : {
+      "s001" : {
+        "navn" : "Delacroix Fire Opal ",
+        "undertekst" : "Stud",
+        "tekst" : "Classy and unforgettable, our Delacroix Fire Opal Turtle Studs are one of a kind. With a delicate black gold exterior and a stunning blue fire opal in the middle, these studs will take your breath away!",
+        "pris" : 129,
+        "farge1" : "blaa",
+        "farge2" : "sort",
+        "bilde" : "stud1.jpg"
+      },
+      "s002" : {
+        "navn" : "Colors Of The Ocean",
+        "undertekst" : "Stud",
+        "tekst" : "Try our Colors Of The Ocean™ Stainless Steel Studs, designed with the stunning blues, greens, and purples of the ocean!  ",
+        "pris" : 129,
+        "farge1" : "oranje",
+        "farge2" : "rosa",
+        "bilde" : "stud2.jpg"
+        }
+      },
+    "t-shirt" : {
+      "t001" : {
+        "navn" : "Save the Sharks",
+        "undertekst" : "T-shirt",
+        "tekst" : "This 100% cotton unisex short-sleeve T-shirt has been made especially for shark lovers. The “Save the Sharks” T-shirt feels soft and lightweight, with the right amount of stretch. It’s comfortable and flattering for both men and women willing to defend these wonderful animals! With it, you’ll proudly be able to share your love of sharks and help raise awareness.",
+        "pris" : 149,
+        "farge1" : "hvit",
+        "farge2" : "sort",
+        "bilde" : "shirt1.jpg"
+      },
+      "t002" : {
+        "navn" : "Keep our oceans clean",
+        "undertekst" : "T-shirt",
+        "tekst" : "Help us make a difference and tsart wearing sustainable clothes. This t-shirtcontains water based inc. We want to protect our earth, help us do that!",
+        "pris" : 149,
+        "farge1" : "graa",
+        "farge2" : "",
+        "bilde" : "shirt2.png"
+      },
+      "t003" : {
+        "navn" : "Protect the oceans",
+        "undertekst" : "T-shirt",
+        "tekst" : "Encompasses everything you're looking for in a cozy tee: a natural, comfortable fit, longer body-lenght and made from 100% combed ringspun cotton fine jersey",
+        "pris" : 149,
+        "farge1" : "hvit",
+        "farge2" : "blaa",
+        "bilde" : "shirt3.png"
+      },
+      "t004" : {
+        "navn" : "Don't Mess With Mother Earth",
+        "undertekst" : "T-shirt",
+        "tekst" : "Respect your mother, Respect yourt earth. Encompasses everything you're looking for in a cozy tee: a natural, comfortable fit, longer body-lenght and made from 100% combed ringspun cotton fine jersey",
+        "pris" : 149,
+        "farge1" : "hvit",
+        "farge2" : "",
+        "bilde" : "shirt4.jpg"
+      },
+      "t005" : {
+        "navn" : "No planet B",
+        "undertekst" : "T-shirt",
+        "tekst" : "Respect your mother, Respect yourt earth. Encompasses everything you're looking for in a cozy tee: a natural, comfortable fit, longer body-lenght and made from 100% combed ringspun cotton fine jersey",
+        "pris" : 149,
+        "farge1" : "graa",
+        "farge2" : "",
+        "bilde" : "shirt5.jpg"
+      }
+    }
+  }
+}

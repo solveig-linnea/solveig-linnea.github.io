@@ -1,0 +1,59 @@
+{
+  "1":{
+    "svar":"En primærnøkkel er en unik nøkkel til hvert objekt i en database. "
+  },
+  "2":{
+    "a":{
+      "svar":"For elever på en skole kan primærnøkkelen være for elevnummer."
+    },
+    "b":{
+      "svar":"For fritidsbåter kan primærnøkkelen være for serie/ID-nummer på båtene."
+    },
+    "c":{
+      "svar":"For planter kan primærnøkkelen være for navn."
+    },
+    "d":{
+      "svar":"På kontaktene dine kan primærnøkkelen være for fullt navn."
+    },
+    "e":{
+      "svar":"For stjernene på himmlene kan primærnøkkelen være for posisjonen til stjernene."
+    }
+  },
+  "3":{
+    "svar":"En kandidatnøkkel er allternativer som kan brukes som en primærnøkkel."
+  },
+  "4":{
+    "svar":"En fremmednøkkel er det som kobler forskjellige deler av databasen med hverandre. Det brukes blant annet til å unngå dobbeltlagring"
+  },
+  "5":{
+    "svar":"Normalsiering er teknikker som brukes for å unngå dobbeltlagring."
+  },
+  "6":{
+    "oppgave":"lage ett objekt med brukere av et dataspill",
+    "svar":{
+      "brukere":{
+        "Solveiglk":{
+          "passord":"passord123",
+          "highscore":5000
+        },
+        "Lentelief":{
+          "passord":"qwer1234",
+          "highscore":"4700"
+        }
+      },
+      "meldinger":{
+        "001":{
+          "tekst":"Hei Lente!",
+          "brukernavn":"Solveiglk"
+        },
+        "002":{
+          "tekst":"Hallo Solveig",
+          "brukernavn":"Lentelief"
+        }
+      }
+    }
+  },
+  "7":{
+    
+  }
+}

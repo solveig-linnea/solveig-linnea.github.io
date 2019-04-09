@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="nb">
+  <head>
+    <meta charset="UTF-8">
+    <title>Nettbutikk</title>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDGzhP6z7MOMVKTZHhXwb6eP56NCiANUXQ",
+        authDomain: "nettbutikk-639ee.firebaseapp.com",
+        databaseURL: "https://nettbutikk-639ee.firebaseio.com",
+        projectId: "nettbutikk-639ee",
+        storageBucket: "nettbutikk-639ee.appspot.com",
+        messagingSenderId: "221828914250"
+      };
+      firebase.initializeApp(config);
+    </script>
+    </head>
+    <body>
+        <main>
+        </main>
+        <script type="text/javascript">
+            const main = document.querySelector("main");
+
+            const db = firebase.database();
+            const sko = db.ref("varer/sko");
+            const jakker = db.ref("varer/jakker");
+
+            function visVare(snapshot){
+              console.log(snapshot.val())
+            }
+
+            jakker.on("child_added", visVare);
+            sko.on("child_added", visVare);
+
+            sko
+              .orderByChild("pris")
+              .limitToFirst(2)
+              .on("child_added", visVare);
+
+        </script>
+    </body>
+</html>

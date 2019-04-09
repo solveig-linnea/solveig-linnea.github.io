@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Prosjekt - Store</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="index/logo.png">
+  <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyA3mzWl10iup3Yyn7alPp_z0EI2XGs5wP4",
+      authDomain: "save-the-fin.firebaseapp.com",
+      databaseURL: "https://save-the-fin.firebaseio.com",
+      projectId: "save-the-fin",
+      storageBucket: "save-the-fin.appspot.com",
+      messagingSenderId: "563831826697"
+    };
+    firebase.initializeApp(config);
+  </script>
+  </head>
+  <body>
+    <header>
+      <div id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="store.html">Store</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div id="logo">
+        <a href="index.html">SAVE THE FIN<img src="index/logo.png" alt=""></a>
+      </div>
+      <div id="header"></div>
+      <article id="sort">
+        <div id="btn1" class="filter" onclick="btnClick1()">
+          <div class="price">Category</div>
+        </div>
+        <div id="btn2" class="filter" onclick="btnClick2()">
+          <div class="price">Price</div>
+        </div>
+        <div id="btn3" class="filter" onclick="btnClick3()">
+          <div class="color">Color</div>
+        </div
+      </article>
+      <div id="choice">
+        <div id="choice1">
+          <div id="bracelet" onclick="visBracelet()"><h4>Bracelet</h4></div>
+          <div id="necklace" onclick="visNecklace()"><h4>Necklace</h4></div>
+          <div id="ring" onclick="visRing()"><h4>Rings</h4></div>
+          <div id="earring" onclick="visEarring()"><h4>Earrings</h4></div>
+          <div id="stud" onclick="visStud()"><h4>Studs</h4></div>
+          <div id="shirt" onclick="visShirt()"><h4>Shirts</h4></div>
+        </div>
+        <div id="choice2">
+          <div id="lavTilHoy" onclick="lavhoy()"><h4>Low to High</h4></div>
+          <div id="hoyTilLav" onclick="hoylav()"><h4>High to Low</h4></div>
+        </div>
+        <div id="choice3">
+          <div id="white" onclick="visHvit()"><h4>White</h4></div>
+          <div id="black" onclick="visSort()"><h4>Black</h4></div>
+          <div id="blue" onclick="visBlaa()"><h4>Blue</h4></div>
+          <div id="green" onclick="visGronn()"><h4>Green</h4></div>
+          <div id="red" onclick="visRoed()"><h4>Red</h4></div>
+          <div id="orange" onclick="visOransje()"><h4>Orange</h4></div>
+          <div id="yellow" onclick="visGul()"><h4>Yellow</h4></div>
+          <div id="pink" onclick="visRosa()"><h4>Pink</h4></div>
+          <div id="silver" onclick="visSolv()"><h4>Silver</h4></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="produkter"></section>
+    </main>
+    <footer>
+      <a href="about.html">OTHERS</a>
+      <a href="contact.html">CONTACT US</a>
+      <a href="about.html">HELP</a>
+    </footer>
+    <script type="text/javascript">
+
+    // HTML-elementer
+    const produkter = document.getElementById("produkter");
+    const choice1 = document.getElementById("choice1");
+    const btn1 = document.getElementById("btn1");
+    const choice2 = document.getElementById("choice2");
+    const btn2 = document.getElementById("btn2");
+    const choice3 = document.getElementById("choice3");
+    const btn3 = document.getElementById("btn3");
+
+    //firebase-kontakt
+    const db = firebase.database();
+    const produkt = db.ref("produkt");
+    const armband = db.ref("produkt/armband");
+    const kjede = db.ref("produkt/kjede");
+    const ring = db.ref("produkt/ring");
+    const oeredobb = db.ref("produkt/oeredobb");
+    const stud = db.ref("produkt/stud");
+    const shirt = db.ref("produkt/t-shirt");
+    const kurv = db.ref("kurv");
+
+    // funksjon som viser alle produkter
+    visAlle();
+
+    function visAlle() {
+      produkter.innerHTML = ``
+      armband.on("child_added",visProdukter);
+      kjede.on("child_added",visProdukter);
+      ring.on("child_added",visProdukter);
+      oeredobb.on("child_added",visProdukter);
+      stud.on("child_added",visProdukter);
+      shirt.on("child_added",visProdukter);
+    }
+
+
+    function visProdukter(snapshot) {
+      let parent = snapshot.ref.parent.key;
+      let key = snapshot.key;
+      let ref = parent+"/"+key;
+      let ProSnap = snapshot.val();
+
+      //HTML-en som blir generert
+      produkter.innerHTML +=`
+      <a href="produkt.html?id=${ref}" id="${produkt.id}" class="prod">
+          <img src="produktbilde/${ProSnap.bilde}" alt="">
+          <h2>${ProSnap.navn}</h2>
+          <br>
+          <p>${ProSnap.undertekst}</p>
+          <h6>${ProSnap.pris},00 NOK</h6>
+          <div class="kjop vis"><h6>Buy</h6></div>
+          <div class="mer vis"><h6>Read more</h6></div>
+      </a>
+      `;
+    }
+
+      //Knappene som styrer sorteringen
+
+    function btnClick1() {
+      var x = document.getElementById("choice1");
+      if (x.style.display === "none" || x.style.display === "") {
+        x.style.display = "grid";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    function btnClick2() {
+      var x = document.getElementById("choice2");
+      if (x.style.display === "none" || x.style.display === "") {
+      x.style.display = "grid";
+      } else {
+      x.style.display = "none";
+      }
+    }
+    function btnClick3() {
+      var x = document.getElementById("choice3");
+      if (x.style.display === "none" || x.style.display === "") {
+      x.style.display = "grid";
+      } else {
+      x.style.display = "none";
+      }
+    }
+
+
+    function visBracelet(){
+      produkter.innerHTML = ``
+      armband.orderByChild("navn").on("child_added",visProdukter);
+    }
+
+    function visNecklace() {
+      produkter.innerHTML = ``
+      kjede.orderByChild("navn").on("child_added",visProdukter);
+    }
+
+    function visRing() {
+      produkter.innerHTML = ``
+      ring.orderByChild("navn").on("child_added",visProdukter);
+    }
+
+    function visEarring() {
+      produkter.innerHTML = ``
+      oeredobb.orderByChild("navn").on("child_added",visProdukter);
+    }
+
+    function visStud() {
+      produkter.innerHTML = ``
+      stud.orderByChild("navn").on("child_added",visProdukter);
+    }
+
+    function visShirt() {
+      produkter.innerHTML = ``
+      shirt.orderByChild("navn").on("child_added",visProdukter);
+    }
+
+    function lavhoy() {
+      produkter.innerHTML = ``
+      kjede.orderByChild("pris").on("child_added",visProdukter);
+      ring.orderByChild("pris").on("child_added",visProdukter);
+      oeredobb.orderByChild("pris").on("child_added",visProdukter);
+      stud.orderByChild("pris").on("child_added",visProdukter);
+      shirt.orderByChild("pris").on("child_added",visProdukter);
+      armband.orderByChild("pris").on("child_added",visProdukter);
+    }
+
+  function visHvit() {
+    produkter.innerHTML = ``
+    kjede.orderByChild("farge1").equalTo("hvit").on("child_added",visProdukter);
+    kjede.orderByChild("farge2").equalTo("hvit").on("child_added",visProdukter);
+    ring.orderByChild("farge1").equalTo("hvit").on("child_added",visProdukter);
+    ring.orderByChild("farge2").equalTo("hvit").on("child_added",visProdukter);
+    oeredobb.orderByChild("farge1").equalTo("hvit").on("child_added",visProdukter);
+    oeredobb.orderByChild("farge2").equalTo("hvit").on("child_added",visProdukter);
+    stud.orderByChild("farge1").equalTo("hvit").on("child_added",visProdukter);
+    stud.orderByChild("farge2").equalTo("hvit").on("child_added",visProdukter);
+    shirt.orderByChild("farge1").equalTo("hvit").on("child_added",visProdukter);
+    shirt.orderByChild("farge2").equalTo("hvit").on("child_added",visProdukter);
+    armband.orderByChild("farge1").equalTo("hvit").on("child_added",visProdukter);
+    armband.orderByChild("farge2").equalTo("hvit").on("child_added",visProdukter);
+  }
+  function visSort() {
+    produkter.innerHTML = ``
+    kjede.orderByChild("farge1").equalTo("sort").on("child_added", visProdukter);
+    kjede.orderByChild("farge2").equalTo("sort").on("child_added", visProdukter);
+    ring.orderByChild("farge1").equalTo("sort").on("child_added", visProdukter);
+    ring.orderByChild("farge2").equalTo("sort").on("child_added", visProdukter);
+    oeredobb.orderByChild("farge1").equalTo("sort").on("child_added", visProdukter);
+    oeredobb.orderByChild("farge2").equalTo("sort").on("child_added", visProdukter);
+    stud.orderByChild("farge1").equalTo("sort").on("child_added", visProdukter);
+    stud.orderByChild("farge2").equalTo("sort").on("child_added", visProdukter);
+    shirt.orderByChild("farge1").equalTo("sort").on("child_added", visProdukter);
+    shirt.orderByChild("farge2").equalTo("sort").on("child_added", visProdukter);
+    armband.orderByChild("farge1").equalTo("sort").on("child_added", visProdukter);
+    armband.orderByChild("farge2").equalTo("sort").on("child_added", visProdukter);
+  }
+  function visBlaa() {
+    produkter.innerHTML = ``
+    kjede.orderByChild("farge1").equalTo("blaa").on("child_added", visProdukter);
+    kjede.orderByChild("farge2").equalTo("blaa").on("child_added", visProdukter);
+    ring.orderByChild("farge1").equalTo("blaa").on("child_added", visProdukter);
+    ring.orderByChild("farge2").equalTo("blaa").on("child_added", visProdukter);
+    oeredobb.orderByChild("farge1").equalTo("blaa").on("child_added", visProdukter);
+    oeredobb.orderByChild("farge2").equalTo("blaa").on("child_added", visProdukter);
+    stud.orderByChild("farge1").equalTo("blaa").on("child_added", visProdukter);
+    stud.orderByChild("farge2").equalTo("blaa").on("child_added", visProdukter);
+    shirt.orderByChild("farge1").equalTo("blaa").on("child_added", visProdukter);
+    shirt.orderByChild("farge2").equalTo("blaa").on("child_added", visProdukter);
+    armband.orderByChild("farge1").equalTo("blaa").on("child_added", visProdukter);
+    armband.orderByChild("farge2").equalTo("blaa").on("child_added", visProdukter);
+  }
+  function visGronn() {
+    produkter.innerHTML = ``
+    kjede.orderByChild("farge1").equalTo("gronn").on("child_added", visProdukter);
+    kjede.orderByChild("farge2").equalTo("gronn").on("child_added", visProdukter);
+    ring.orderByChild("farge1").equalTo("gronn").on("child_added", visProdukter);
+    ring.orderByChild("farge2").equalTo("gronn").on("child_added", visProdukter);
+    oeredobb.orderByChild("farge1").equalTo("gronn").on("child_added", visProdukter);
+    oeredobb.orderByChild("farge2").equalTo("gronn").on("child_added", visProdukter);
+    stud.orderByChild("farge1").equalTo("gronn").on("child_added", visProdukter);
+    stud.orderByChild("farge2").equalTo("gronn").on("child_added", visProdukter);
+    shirt.orderByChild("farge1").equalTo("gronn").on("child_added", visProdukter);
+    shirt.orderByChild("farge2").equalTo("gronn").on("child_added", visProdukter);
+    armband.orderByChild("farge1").equalTo("gronn").on("child_added", visProdukter);
+    armband.orderByChild("farge2").equalTo("gronn").on("child_added", visProdukter);
+  }
+  function visRoed() {
+    produkter.innerHTML = ``
+    kjede.orderByChild("farge1").equalTo("roed").on("child_added", visProdukter);
+    kjede.orderByChild("farge2").equalTo("roed").on("child_added", visProdukter);
+    ring.orderByChild("farge1").equalTo("roed").on("child_added", visProdukter);
+    ring.orderByChild("farge2").equalTo("roed").on("child_added", visProdukter);
+    oeredobb.orderByChild("farge1").equalTo("roed").on("child_added", visProdukter);
+    oeredobb.orderByChild("farge2").equalTo("roed").on("child_added", visProdukter);
+    stud.orderByChild("farge1").equalTo("roed").on("child_added", visProdukter);
+    stud.orderByChild("farge2").equalTo("roed").on("child_added", visProdukter);
+    shirt.orderByChild("farge1").equalTo("roed").on("child_added", visProdukter);
+    shirt.orderByChild("farge2").equalTo("roed").on("child_added", visProdukter);
+    armband.orderByChild("farge1").equalTo("roed").on("child_added", visProdukter);
+    armband.orderByChild("farge2").equalTo("roed").on("child_added", visProdukter);
+  }
+  function visOransje() {
+    produkter.innerHTML = ``
+    kjede.orderByChild("farge1").equalTo("oransje").on("child_added", visProdukter);
+    kjede.orderByChild("farge2").equalTo("oransje").on("child_added", visProdukter);
+    ring.orderByChild("farge1").equalTo("oransje").on("child_added", visProdukter);
+    ring.orderByChild("farge2").equalTo("oransje").on("child_added", visProdukter);
+    oeredobb.orderByChild("farge1").equalTo("oransje").on("child_added", visProdukter);
+    oeredobb.orderByChild("farge2").equalTo("oransje").on("child_added", visProdukter);
+    stud.orderByChild("farge1").equalTo("oransje").on("child_added", visProdukter);
+    stud.orderByChild("farge2").equalTo("oransje").on("child_added", visProdukter);
+    shirt.orderByChild("farge1").equalTo("oransje").on("child_added", visProdukter);
+    shirt.orderByChild("farge2").equalTo("oransje").on("child_added", visProdukter);
+    armband.orderByChild("farge1").equalTo("oransje").on("child_added", visProdukter);
+    armband.orderByChild("farge2").equalTo("oransje").on("child_added", visProdukter);
+  }
+  function visGul() {
+    produkter.innerHTML = ``
+    kjede.orderByChild("farge1").equalTo("gul").on("child_added", visProdukter);
+    kjede.orderByChild("farge2").equalTo("gul").on("child_added", visProdukter);
+    ring.orderByChild("farge1").equalTo("gul").on("child_added", visProdukter);
+    ring.orderByChild("farge2").equalTo("gul").on("child_added", visProdukter);
+    oeredobb.orderByChild("farge1").equalTo("gul").on("child_added", visProdukter);
+    oeredobb.orderByChild("farge2").equalTo("gul").on("child_added", visProdukter);
+    stud.orderByChild("farge1").equalTo("gul").on("child_added", visProdukter);
+    stud.orderByChild("farge2").equalTo("gul").on("child_added", visProdukter);
+    shirt.orderByChild("farge1").equalTo("gul").on("child_added", visProdukter);
+    shirt.orderByChild("farge2").equalTo("gul").on("child_added", visProdukter);
+    armband.orderByChild("farge1").equalTo("gul").on("child_added", visProdukter);
+    armband.orderByChild("farge2").equalTo("gul").on("child_added", visProdukter);
+  }
+  function visRosa() {
+    produkter.innerHTML = ``
+    kjede.orderByChild("farge1").equalTo("rosa").on("child_added", visProdukter);
+    kjede.orderByChild("farge2").equalTo("rosa").on("child_added", visProdukter);
+    ring.orderByChild("farge1").equalTo("rosa").on("child_added", visProdukter);
+    ring.orderByChild("farge2").equalTo("rosa").on("child_added", visProdukter);
+    oeredobb.orderByChild("farge1").equalTo("rosa").on("child_added", visProdukter);
+    oeredobb.orderByChild("farge2").equalTo("rosa").on("child_added", visProdukter);
+    stud.orderByChild("farge1").equalTo("rosa").on("child_added", visProdukter);
+    stud.orderByChild("farge2").equalTo("rosa").on("child_added", visProdukter);
+    shirt.orderByChild("farge1").equalTo("rosa").on("child_added", visProdukter);
+    shirt.orderByChild("farge2").equalTo("rosa").on("child_added", visProdukter);
+    armband.orderByChild("farge1").equalTo("rosa").on("child_added", visProdukter);
+    armband.orderByChild("farge2").equalTo("rosa").on("child_added", visProdukter);
+  }
+  function visSolv() {
+    produkter.innerHTML = ``
+    kjede.orderByChild("farge1").equalTo("solv").on("child_added", visProdukter);
+    kjede.orderByChild("farge2").equalTo("solv").on("child_added", visProdukter);
+    ring.orderByChild("farge1").equalTo("solv").on("child_added", visProdukter);
+    ring.orderByChild("farge2").equalTo("solv").on("child_added", visProdukter);
+    oeredobb.orderByChild("farge1").equalTo("solv").on("child_added", visProdukter);
+    oeredobb.orderByChild("farge2").equalTo("solv").on("child_added", visProdukter);
+    stud.orderByChild("farge1").equalTo("solv").on("child_added", visProdukter);
+    stud.orderByChild("farge2").equalTo("solv").on("child_added", visProdukter);
+    shirt.orderByChild("farge1").equalTo("solv").on("child_added", visProdukter);
+    shirt.orderByChild("farge2").equalTo("solv").on("child_added", visProdukter);
+    armband.orderByChild("farge1").equalTo("solv").on("child_added", visProdukter);
+    armband.orderByChild("farge2").equalTo("solv").on("child_added", visProdukter);
+  }
+
+
+
+
+
+    </script>
+
+  </body>
+</html>

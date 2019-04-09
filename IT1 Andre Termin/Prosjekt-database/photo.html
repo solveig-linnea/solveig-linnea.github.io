@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>The Fin - Our Photo Gallery</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="index/logo.png">
+  </head>
+  <body>
+    <header>
+      <div id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="store.html">Store</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div id="logo">
+        <a href="index.html">SAVE THE FIN<img src="index/logo.png" alt=""></a>
+      </div>
+    </header>
+    <main>
+      <div class="over" id="myOver">
+        <h1>Image Grid</h1>
+        <p>Click on the buttons to change the grid view.</p>
+        <button class="btnPhoto" onclick="en()">1</button>
+        <button class="btnPhoto" onclick="to()">2</button>
+        <button class="btnPhoto" onclick="fire()">4</button>
+      </div>
+
+      <div id="row">
+        <div class="column">
+          <img src="PG/img1.jpeg">
+          <img src="PG/img2.jpg">
+          <img src="PG/img3.jpeg">
+          <img src="PG/img4.jpeg">
+          <img src="PG/img5.jpeg">
+          <img src="PG/img5,5.jpeg">
+        </div>
+        <div class="column">
+          <img src="PG/img6.jpeg">
+          <img src="PG/img7.jpeg">
+          <img src="PG/img8.jpeg">
+          <img src="PG/img9.jpeg">
+        </div>
+        <div class="column">
+          <img src="PG/img10.jpeg">
+          <img src="PG/img11.jpeg">
+          <img src="PG/img12.jpg">
+          <img src="PG/img13.jpeg">
+          <img src="PG/img14.jpeg">
+          <img src="PG/img14,5.jpeg">
+        </div>
+        <div class="column">
+          <img src="PG/img15.jpeg">
+          <img src="PG/img16.jpg">
+          <img src="PG/img17.jpeg">
+          <img src="PG/img18.jpeg">
+          <img src="PG/img19.jpeg">
+          <img src="PG/img19,5.jpeg">
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="about.html">OTHERS</a>
+      <a href="contact.html">CONTACT US</a>
+      <a href="about.html">HELP</a>
+    </footer>
+    <script>
+    var elements = document.getElementsByClassName("column");
+
+      // Declare a "loop" variable
+      var i;
+
+      // Full-width images
+      function en() {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].style.flex = "100%";
+        }
+      }
+
+      // Two images side by side
+      function to() {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].style.flex = "50%";
+        }
+      }
+
+      // Four images side by side
+      function fire() {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].style.flex = "25%";
+        }
+      }
+
+    // Add active class to the current button (highlight it)
+    var header = document.getElementById("myOver");
+    var btns = header.getElementsByClassName("btnPhoto");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+    </script>
+  </body>
+</html>

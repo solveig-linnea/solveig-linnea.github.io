@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Prosjekt</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="index/logo.png">
+  </head>
+  <body>
+    <header>
+      <div id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="store.html">Store</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div id="logo">
+        <a href="index.html">SAVE THE FIN<img src="index/logo.png" alt="Picture of the logo"></a>
+      </div>
+      <div id="header-slide">
+        <div class="mySlides fade">
+          <img src="index/skillpadde.jpg">
+        </div>
+        <div class="mySlides fade">
+          <img src="index/hval.jpeg">
+        </div>
+        <div class="mySlides fade">
+          <img src="index/nemo.jpg">
+        </div>
+        <!-- Neste og forrige -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </header>
+    <main>
+      <div class="grid3">
+        <a href="animal.html">
+          <article class="animals">
+            <h3>The Animals</h3>
+            <p>Oceans are the lifeblood of Earth. If they go, we go with them. Below the thin blue line, our oceans are in trouble. We need your help.</p>
+            <img src="" alt="">
+            <p id="les">Mer info</p>
+          </article>
+        </a>
+        <a href="photo.html">
+          <article class="photo">
+            <h3>Photo Gallery</h3>
+            <p>In order to try and raise awerness of the danger these marine animals are in we have taken several pictures them to show the beauty.</p>
+            <img src="" alt="">
+            <p id="les">Mer info</p>
+          </article>
+        </a>
+        <a href="store.html">
+          <article class="store">
+            <h3>Store</h3>
+            <p>But our products in order to support us and help save the lives of innocent marine life. Every product you buy will help our cause</p>
+            <img src="" alt="">
+            <p id="les">Mer info</p>
+          </article>
+        </a>
+      </div>
+      <div class="bilde">
+        <img src="nature/10.png" alt="" id="straw">
+        <img src="nature/earth.png" alt="" id="earth">
+        <img src="nature/5.png" alt="" id="time">
+      </div>
+      <section id="best-sellers">
+        <div id="subTitle">
+          <h3>Buy our best sellers!</h3>
+        </div>
+        <a class="product" href="store.html">
+          <img src="produktbilde/shirt3.png" alt="">
+          <h4>Protect our ocean - Protect our future - t-shirt</h4>
+          <br>
+          <h5>Lorem impsum...</h5>
+          <br>
+          <h6>149.00 NOK</h6>
+          <p><button>Buy</button></p>
+        </a>
+        <a class="product" href="store.html">
+          <img src="produktbilde/kjede4.jpg" alt="">
+          <h4>Metallic Stingray - Jewerly Chain</h4>
+          <br>
+          <h5>Lorem impsum...</h5>
+          <br>
+          <h6>149.00 NOK</h6>
+          <p><button>Buy</button></p>
+        </a>
+        <a class="product" href="store.html">
+          <img src="produktbilde/shirt2.png" alt="">
+          <h4>Grey Protect the Earth - t-shirt</h4>
+          <br>
+          <h5>Lorem impsum...</h5>
+          <br>
+          <h6>149.00 NOK</h6>
+          <p><button>Buy</button></p>
+        </a>
+        <a class="product" href="store.html">
+          <img src="produktbilde/stud1.jpg" alt="">
+          <h4>Blue and Black Turtle - Studs</h4>
+          <br>
+          <h5>Lorem impsum...</h5>
+          <br>
+          <h6>129.00 NOK</h6>
+          <p><button>Buy</button></p>
+        </a>
+        <a class="product" href="store.html">
+          <img src="produktbilde/kjede6.jpg" alt="">
+          <h4>Mother Earth - Jewerly Chain</h4>
+          <br>
+          <h5>Lorem impsum...</h5>
+          <br>
+          <h6>149.00 NOK</h6>
+          <p><button>Buy</button></p>
+        </a>
+        <a class="product" href="store.html">
+          <img src="produktbilde/armband4.jpg" alt="">
+          <h4>Ride the Wave - Bracelet</h4>
+          <br>
+          <h5>Lorem impsum...</h5>
+          <br>
+          <h6>129.00 NOK</h6>
+          <p><button>Buy</button></p>
+        </a>
+      </section>
+    </main>
+    <footer>
+      <a href="about.html">OTHERS</a>
+      <a href="contact.html">CONTACT US</a>
+      <a href="aout.html">HELP</a>
+    </footer>
+
+    <!-- js kode for header-slideshow -->
+    <script type="text/javascript">
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+
+    </script>
+
+
+  </body>
+</html>

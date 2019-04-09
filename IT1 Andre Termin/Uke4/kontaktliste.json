@@ -1,0 +1,42 @@
+{
+  "kontakter":{
+    "1":{
+      "firstName":"Solveig Linnea",
+      "lastName":"Kildahl",
+      "age":"16",
+      "telephone":"90102322",
+      "adress":"Gamle Drammensvei 143, 1363 Høvik",
+      "favoriteBooks":["Lazarus", "Tempelridderen", "PJO-series", "Simon vs. the Homosapians Agenda", "72 hours on the moon"],
+      "favoriteMovies":["Gladiator", "Mr. and Mrs Smith", "An Officer and a Gentleman", "Notting Hill", "Love Simon", "Wonder Woman"],
+      "likesSkiing":true,
+      "likesHeights":false,
+      "likesDiving":true,
+      "inARelationship":false,
+      "educationAndWork":{
+        "middleSchool":"Ramstad Ungdomsskole",
+        "PreUniveristy":"Sandvika vgs",
+        "currentWork":"Skiing Instructer in Jardar IL",
+        "otherWork":"None"
+      }
+    },
+      "2":{
+        "firstName":"Lente Kirsti Markeike",
+        "lastName":"Emmanuelasen-Sinnige",
+        "age":"16",
+        "telephone":"95089570",
+        "adress":"Gamle Drammensvei 7, 1368 Stabæk",
+        "favoriteBooks":"none",
+        "favoriteMovies":["Mamma Mia", "Harry Potter", "Avengers", "Runnaway Bride"],
+        "likesSkiing":true,
+        "likesHeights":false,
+        "likesDiving":false,
+        "inARelationship":true,
+        "educationAndWorkwork":{
+          "middleSchool":"Ramstad Ungdomsskole",
+          "PreUniveristy":"Sandvika vgs",
+          "currentWork":"None",
+          "otherWork":"Fredrick og Louisa"
+      }
+    }
+  }
+}

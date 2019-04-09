@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="index/logo.png">
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyA3mzWl10iup3Yyn7alPp_z0EI2XGs5wP4",
+        authDomain: "save-the-fin.firebaseapp.com",
+        databaseURL: "https://save-the-fin.firebaseio.com",
+        projectId: "save-the-fin",
+        storageBucket: "save-the-fin.appspot.com",
+        messagingSenderId: "563831826697"
+      };
+      firebase.initializeApp(config);
+    </script>
+    </head>
+    <body>
+      <header>
+        <div id="nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="store.html">Store</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <div id="logo">
+          <a href="index.html">SAVE THE FIN<img src="index/logo.png" alt=""></a>
+        </div>
+      </header>
+      <main>
+        <article id="info"></article>
+        <article id="more"></article>
+      </main>
+      <footer>
+        <a href="about.html">OTHERS</a>
+        <a href="contact.html">CONTACT US</a>
+        <a href="about.html">HELP</a>
+      </footer>
+
+
+      <script type="text/javascript">
+        //referanser til HTML-elementer
+        const info = document.getElementById("info");
+        const fler = document.getElementById("fler");
+
+        //Kode som henter info ut fra url
+        let url_string = window.location.href;
+        let url = new URL (url_string);
+        let id = url.searchParams.get("id");
+
+        console.log(id);
+
+        //referanse til databasen
+        const db = firebase.database();
+        const armband = db.ref("produkt/armband");
+        const kjede = db.ref("produkt/kjede");
+        const ring = db.ref("produkt/ring");
+        const oeredobb = db.ref("produkt/oeredobb");
+        const stud = db.ref("produkt/stud");
+        const shirt = db.ref("produkt/t-shirt");
+        const valgtProdukt = db.ref("produkt/"+id);
+        const kurv = db.ref("kurv");
+
+
+
+        //oppstart
+        visValgtProdukt();
+
+        //funskjonsdefinisjoner
+        function visValgtProdukt() {
+          info.innerHTML = ``
+          valgtProdukt.on("value", genererHTML);
+        }
+
+
+
+
+        function genererHTML(snapshot) {
+          let key = snapshot.key;
+          let objekt = snapshot.val();
+          console.log(key, objekt);
+
+          info.innerHTML +=`
+            <article id="bilde">
+              <img src="produktbilde/${objekt.bilde}" alt="">
+            </article>
+            <article id="inf">
+              <h1>${objekt.navn}</h1>
+              <h3>${objekt.undertekst}</h3>
+              <hr>
+              <p>${objekt.tekst}<p>
+              <hr>
+              <div id="pris">
+                <h5>TOTAL:</h5>
+                <h5>${objekt.pris}.00 NOK</h5>
+              </div>
+              <hr>
+              <div id="kjop" onclick="buy('${objekt.id}')"><h7>Add to Shopping Cart</h7></div>
+            </article> `
+        }
+      </script>
+  </body>
+</html>

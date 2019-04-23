@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Prosjekt - Store</title>
+    <title>Save the Fin | Store</title>
     <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" href="index/logo.png">
   <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
@@ -25,7 +25,7 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="store.html">Store</a>
-        <a href="contact.html">Contact Us</a>
+        <button  id="contactbtn" onclick="document.getElementById('id01').style.display='block'">Contact Us</button>
       </div>
       <div id="logo">
         <a href="index.html">SAVE THE FIN<img src="index/logo.png" alt=""></a>
@@ -40,36 +40,61 @@
         </div>
         <div id="btn3" class="filter" onclick="btnClick3()">
           <div class="color">Color</div>
-        </div
-      </article>
+        </div>
       <div id="choice">
         <div id="choice1">
-          <div id="bracelet" onclick="visBracelet()"><h4>Bracelet</h4></div>
-          <div id="necklace" onclick="visNecklace()"><h4>Necklace</h4></div>
-          <div id="ring" onclick="visRing()"><h4>Rings</h4></div>
-          <div id="earring" onclick="visEarring()"><h4>Earrings</h4></div>
-          <div id="stud" onclick="visStud()"><h4>Studs</h4></div>
-          <div id="shirt" onclick="visShirt()"><h4>Shirts</h4></div>
+          <div id="bracelet" onclick="visBracelet()"><h6>Bracelet</h6></div>
+          <div id="necklace" onclick="visNecklace()"><h6>Necklace</h6></div>
+          <div id="ring" onclick="visRing()"><h6>Rings</h6></div>
+          <div id="earring" onclick="visEarring()"><h6>Earrings</h6></div>
+          <div id="stud" onclick="visStud()"><h6>Studs</h6></div>
+          <div id="shirt" onclick="visShirt()"><h6>Shirts</h6></div>
         </div>
         <div id="choice2">
-          <div id="lavTilHoy" onclick="lavhoy()"><h4>Low to High</h4></div>
-          <div id="hoyTilLav" onclick="hoylav()"><h4>High to Low</h4></div>
+          <div id="lavTilHoy" onclick="lavhoy()"><h6>Low to High</h6></div>
+          <div id="hoyTilLav" onclick="hoylav()"><h6>High to Low</h6></div>
         </div>
         <div id="choice3">
-          <div id="white" onclick="visHvit()"><h4>White</h4></div>
-          <div id="black" onclick="visSort()"><h4>Black</h4></div>
-          <div id="blue" onclick="visBlaa()"><h4>Blue</h4></div>
-          <div id="green" onclick="visGronn()"><h4>Green</h4></div>
-          <div id="red" onclick="visRoed()"><h4>Red</h4></div>
-          <div id="orange" onclick="visOransje()"><h4>Orange</h4></div>
-          <div id="yellow" onclick="visGul()"><h4>Yellow</h4></div>
-          <div id="pink" onclick="visRosa()"><h4>Pink</h4></div>
-          <div id="silver" onclick="visSolv()"><h4>Silver</h4></div>
+          <div id="white" onclick="visHvit()"><h6>White</h6></div>
+          <div id="black" onclick="visSort()"><h6>Black</h6></div>
+          <div id="blue" onclick="visBlaa()"><h6>Blue</h6></div>
+          <div id="green" onclick="visGronn()"><h6>Green</h6></div>
+          <div id="red" onclick="visRoed()"><h6>Red</h6></div>
+          <div id="orange" onclick="visOransje()"><h6>Orange</h6></div>
+          <div id="yellow" onclick="visGul()"><h6>Yellow</h6></div>
+          <div id="pink" onclick="visRosa()"><h6>Pink</h6></div>
+          <div id="silver" onclick="visSolv()"><h6>Silver</h6></div>
         </div>
       </div>
     </header>
     <main>
       <section id="produkter"></section>
+      <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <form class="modal-content" action="/action_page.php">
+          <div class="container">
+            <h1>Contact Us</h1>
+            <p>Please fill in this form to contact us. We love to hear from you!</p>
+            <hr>
+            <label for="firstName"><b>First Name</b></label>
+            <input type="name" placeholder="Enter First Name" name="firstName" required>
+
+            <label for="lastName"><b>Last Name</b></label>
+            <input type="name" placeholder="Enter Last Name" name="lasttName" required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="subject">Subject</label>
+            <textarea type="text" placeholder="Skriv noe..."></textarea>
+
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" id="cancelbtn" class="contactbtn2">Cancel</button>
+              <button type="submit" id="contbtn" class="contactbtn2">Sign Up</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </main>
     <footer>
       <a href="about.html">OTHERS</a>
@@ -96,6 +121,8 @@
     const oeredobb = db.ref("produkt/oeredobb");
     const stud = db.ref("produkt/stud");
     const shirt = db.ref("produkt/t-shirt");
+    const handlekurv = db.ref("handlekurv");
+    const alleProd = db.ref("Alleprodukter");
 
     // funksjon som viser alle produkter
     visAlle();
@@ -120,7 +147,7 @@
       //HTML-en som blir generert
       produkter.innerHTML +=`
       <a href="produkt.html?id=${ref}" id="${produkt.id}" class="prod">
-          <img src="produktbilde/${ProSnap.bilde}" alt="">
+          <img src="produktbilde/${ProSnap.bilde}" alt="Picture of our product">
           <h2>${ProSnap.navn}</h2>
           <br>
           <p>${ProSnap.undertekst}</p>
@@ -130,6 +157,26 @@
       </a>
       `;
     }
+    function visProdukterSnudd(snapshot) {
+      let parent = snapshot.ref.parent.key;
+      let key = snapshot.key;
+      let ref = parent+"/"+key;
+      let ProSnap = snapshot.val();
+
+      //HTML-en som blir generert
+      produkter.innerHTML = `
+      <a href="produkt.html?id=${ref}" id="${produkt.id}" class="prod">
+          <img src="produktbilde/${ProSnap.bilde}" alt="Picture of our product">
+          <h2>${ProSnap.navn}</h2>
+          <br>
+          <p>${ProSnap.undertekst}</p>
+          <h6>${ProSnap.pris},00 NOK</h6>
+          <div class="kjop vis"><h6>Buy</h6></div>
+          <div class="mer vis"><h6>Read more</h6></div>
+      </a>
+      ` + produkter.innerHTML;
+    }
+
 
       //Knappene som styrer sorteringen
     function btnClick1() {
@@ -190,12 +237,12 @@
 
     function lavhoy() {
       produkter.innerHTML = ``
-      kjede.orderByChild("pris").on("child_added",visProdukter);
-      ring.orderByChild("pris").on("child_added",visProdukter);
-      oeredobb.orderByChild("pris").on("child_added",visProdukter);
-      stud.orderByChild("pris").on("child_added",visProdukter);
-      shirt.orderByChild("pris").on("child_added",visProdukter);
-      armband.orderByChild("pris").on("child_added",visProdukter);
+      alleProd.orderByChild("pris").on("child_added",visProdukter);
+    }
+    function hoylav() {
+      produkter.innerHTML = ``
+      alleProd.orderByChild("pris").on("child_added", visProdukterSnudd);
+
     }
 
   function visHvit() {

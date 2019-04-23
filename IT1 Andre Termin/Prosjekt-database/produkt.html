@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Save the Fin | Product</title>
     <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" href="index/logo.png">
     <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
@@ -25,7 +25,7 @@
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="store.html">Store</a>
-          <a href="contact.html">Contact Us</a>
+          <button  id="contactbtn" onclick="document.getElementById('id01').style.display='block'">Contact Us</button>
         </div>
         <div id="logo">
           <a href="index.html">SAVE THE FIN<img src="index/logo.png" alt="Picture of logo"></a>
@@ -33,7 +33,37 @@
       </header>
       <main>
         <article id="info"></article>
-        <article id="more"></article>
+        <hr>
+        <article id="seMer">
+          <h1>More Like This</h1>
+          <div id="more"></div>
+        </article>
+        <div id="id01" class="modal">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <form class="modal-content" action="/action_page.php">
+            <div class="container">
+              <h1>Contact Us</h1>
+              <p>Please fill in this form to contact us. We love to hear from you!</p>
+              <hr>
+              <label for="firstName"><b>First Name</b></label>
+              <input type="name" placeholder="Enter First Name" name="firstName" required>
+
+              <label for="lastName"><b>Last Name</b></label>
+              <input type="name" placeholder="Enter Last Name" name="lasttName" required>
+
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+
+              <label for="subject">Subject</label>
+              <textarea type="text" placeholder="Skriv noe..."></textarea>
+
+              <div class="clearfix">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" id="cancelbtn" class="contactbtn2">Cancel</button>
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" id="contbtn" class="contactbtn2">Sign Up</button>
+              </div>
+            </div>
+          </form>
+        </div>
       </main>
       <footer>
         <a href="about.html">OTHERS</a>
@@ -56,6 +86,7 @@
 
         //referanse til databasen
         const db = firebase.database();
+        const produkt = db.ref("produkt");
         const armband = db.ref("produkt/armband");
         const kjede = db.ref("produkt/kjede");
         const ring = db.ref("produkt/ring");
@@ -63,11 +94,13 @@
         const stud = db.ref("produkt/stud");
         const shirt = db.ref("produkt/t-shirt");
         const valgtProdukt = db.ref("produkt/"+id);
+        const alleProd = db.ref("Alleprodukter");
 
 
 
         //oppstart
         visValgtProdukt();
+        visProdukter();
 
 
         //funskjonsdefinisjoner
@@ -77,7 +110,9 @@
         }
 
         function genererHTML(snapshot) {
+          let parent = snapshot.ref.parent.key;
           let key = snapshot.key;
+          let ref = parent+"/"+key;
           let objekt = snapshot.val();
           console.log(key, objekt);
 
@@ -96,9 +131,43 @@
                 <h5>${objekt.pris}.00 NOK</h5>
               </div>
               <hr>
-              <div id="kjop" onclick="buy('${objekt.id}')"><h7>Add to Shopping Cart</h7></div>
-            </article> `
+              <div id="kjop"><a href="kjop.html?id=${ref}" id="${produkt.id}"><h7>Purchase</h7></a></div>
+              </article>
+            `
+          }
+
+
+        function visFler(snapshot){
+                  //Javascript-funksjon som skriver varene ut på nettsiden i main-elementet
+          let parent = snapshot.ref.parent.key;
+          let key = snapshot.key;
+          let ref = parent+"/"+key;
+          let ProSnap = snapshot.val();
+
+          more.innerHTML +=`
+            <a href="produkt.html?id=${ref}" id="${produkt.id}" class="prod">
+              <img src="produktbilde/${ProSnap.bilde}" alt="Picture of our product">
+              <h2>${ProSnap.navn}</h2>
+              <br>
+              <P>${ProSnap.undertekst}</p>
+              <h6>${ProSnap.pris},00 NOK</h6>
+              <div class="kjop vis"><h6>Buy</h6></div>
+              <div class="mer vis"><h6>Read more</h6></div>
+            </a>
+          `;
         }
+
+            function visProdukter(){
+              more.innerHTML = ``;
+              alleProd.orderByChild("pris").limitToFirst(4).on("child_added", visFler);
+            }
+
+
+
+
+
+
+
 
       </script>
   </body>

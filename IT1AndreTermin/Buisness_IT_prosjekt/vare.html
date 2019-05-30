@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rare Hare | Valgt vare</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="indexBilde/logoHare.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBAd3LbLutirw8xCVirILH3vAkJAki-3_k",
+        authDomain: "vare-hare.firebaseapp.com",
+        databaseURL: "https://vare-hare.firebaseio.com",
+        projectId: "vare-hare",
+        storageBucket: "vare-hare.appspot.com",
+        messagingSenderId: "735658736972"
+      };
+      firebase.initializeApp(config);
+    </script>
+  </head>
+  <body>
+    <header>
+      <section id="Navbar-original">
+        <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+          <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Lukk &times;</button>
+          <a href="nyheter.html" class="w3-bar-item w3-button">Nyheter</a>
+          <a href="kontakt.html" class="w3-bar-item w3-button">Kontakt oss</a>
+          <a href="butikk.html" class="w3-bar-item w3-button">Butikk</a>
+          <a href="medlem.html" class="w3-bar-item w3-button">Bli Medlem</a>
+          <a href="sammarbeid.html" class="w3-bar-item w3-button">Sammarbeid med oss</a>
+        </div>
+      </section>
+      <div id="main">
+        <div class="w3-teal">
+          <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+          <div class="nav-bar">
+            <a href="oss.html" class="textNav">Om Oss</a>
+            <a href="nyheter.html" class="textNav">Nyheter</a>
+            <a href="index.html"><img src="indexBilde/Vare-Hare1.png" alt="Bilde av logoen vår"></a>
+            <a href="butikk.html" class="textNav">Butikk</a>
+            <a href="medlem.html" class="textNav">Bli Medlem</a>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function w3_open() {
+          document.getElementById("main").style.marginLeft = "25%";
+          document.getElementById("mySidebar").style.width = "25%";
+          document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("openNav").style.display = 'none';
+        }
+        function w3_close() {
+          document.getElementById("main").style.marginLeft = "0%";
+          document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("openNav").style.display = "inline-block";
+        }
+        function kontakt() {
+          var x = document.getElementById("snackbar");
+          x.className = "show";
+          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+      </script>
+    </header>
+    <main>
+      <article id="info"></article>
+      <hr>
+      <article id="more">
+        <h1>Se ligndende produkter</h1>
+        <div id="mer"></div>
+      </article>
+    </main>
+    <footer>
+      <section id="headFooter">
+        <section>
+          <h4>Kontakt Oss</h4>
+        </section>
+        <section>
+          <h4>Følg Oss</h4>
+        </section>
+        <section>
+          <h4>Ledige Stillinger</h4>
+        </section>
+      </section>
+      <section id="bodyFooter">
+        <section>
+          <li><a href="kontakt.html">Trykk her</a></li>
+          <li>+47 123 45 678</li>
+        </section>
+        <section>
+          <h3><a href="https://www.instagram.com/rare_._hare/" class="fa fa-instagram"></a></h3>
+        </section>
+        <section>
+          <p>Kontakt oss for å vite mer</p>
+        </section>
+      </section>
+    </footer>
+    <script type="text/javascript">
+      const info = document.getElementById("info");
+      const mer = document.getElementById("mer");
+
+      //Kode som henter info ut fra url
+      let url_string = window.location.href;
+      let url = new URL (url_string);
+      let id = url.searchParams.get("id");
+
+      console.log(id);
+
+      const db = firebase.database();
+
+      const varer = db.ref("varer");
+      const rot = db.ref("varer/Rot");
+      const gronnsaker = db.ref("varer/Gronnsaker");
+      const frukt = db.ref("varer/Frukt");
+      const potet = db.ref("varer/Poteter");
+      const valgtVare = db.ref("varer/"+id);
+
+      //oppstart
+      visValgtVare();
+      visVarer();
+
+      //funskjonsdefinisjoner
+      function visValgtVare() {
+        info.innerHTML = ``
+        valgtVare.on("value", genererHTML);
+      }
+
+      function genererHTML(snapshot) {
+        let parent = snapshot.ref.parent.key;
+        let key = snapshot.key;
+        let ref = parent+"/"+key;
+        let objekt = snapshot.val();
+        console.log(key, objekt);
+
+        info.innerHTML +=`
+          <article id="bilde">
+            <img src="Handlekurv/${objekt.ImageURL}" alt="Bilde av varen du har valgt">
+          </article>
+          <article id="inf">
+            <h1>${objekt.name}</h1>
+            <h3>${objekt.Vekt},00 kg</h3>
+            <hr>
+            <p>${objekt.tekst}<p>
+            <hr>
+            <div id="pris">
+              <h5>TOTALT:</h5>
+              <h5>${objekt.pris}.00 NOK</h5>
+            </div>
+            <hr>
+            </article>
+          `;
+        }
+
+
+        function visFler(snapshot){
+          //Javascript-funksjon som skriver varene ut på nettsiden i main-elementet
+          let parent = snapshot.ref.parent.key;
+          let key = snapshot.key;
+          let ref = parent+"/"+key;
+          let vare = snapshot.val();
+
+          mer.innerHTML +=`
+          <section class="vare">
+            <a href="vare.html?id=${ref}">
+            <img src=Handlekurv/${vare.ImageURL} alt="Bilde av varen du har valgt">
+              <h2>${vare.pris},00 NOK pr.kg</h2>
+              <hr>
+              <p>${vare.Vekt},00 kg</p>
+              <h2>${vare.name}</h2>
+            </a>
+          </section>
+          `;
+        }
+
+            function visVarer(){
+              mer.innerHTML = ``
+              frukt.limitToFirst(4).on("child_added", visFler);
+            }
+
+    </script>
+
+  </body>
+</html>

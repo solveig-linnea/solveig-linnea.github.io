@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rare Hare | Sammarbeid</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="indexBilde/logoHare.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header>
+      <section id="Navbar-original">
+        <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+          <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Lukk &times;</button>
+          <a href="nyheter.html" class="w3-bar-item w3-button">Nyheter</a>
+          <a href="kontakt.html" class="w3-bar-item w3-button">Kontakt oss</a>
+          <a href="butikk.html" class="w3-bar-item w3-button">Butikk</a>
+          <a href="medlem.html" class="w3-bar-item w3-button">Bli Medlem</a>
+          <a href="sammarbeid.html" class="w3-bar-item w3-button">Sammarbeid med oss</a>
+        </div>
+      </section>
+      <div id="main">
+        <div class="w3-teal">
+          <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+          <div class="nav-bar">
+            <a href="oss.html" class="textNav">Om Oss</a>
+            <a href="nyheter.html" class="textNav">Nyheter</a>
+            <a href="index.html"><img src="indexBilde/Vare-Hare1.png" alt="Bilde av logoen vår"></a>
+            <a href="butikk.html" class="textNav">Butikk</a>
+            <a href="medlem.html" class="textNav">Bli Medlem</a>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function w3_open() {
+          document.getElementById("main").style.marginLeft = "25%";
+          document.getElementById("mySidebar").style.width = "25%";
+          document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("openNav").style.display = 'none';
+        }
+        function w3_close() {
+          document.getElementById("main").style.marginLeft = "0%";
+          document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("openNav").style.display = "inline-block";
+        }
+        function kontakt() {
+          var x = document.getElementById("snackbar");
+          x.className = "show";
+          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+      </script>
+      <div id="header-sammarbeid"></div>
+    </header>
+    <main>
+      <h1>Sammarbeid med andre bedrifter</h1>
+      <div class="sammarbeid-grid">
+        <section id="sammarbeid-tekst">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </section>
+        <section id="sammarbeid-bilde">
+          <img src="samBilde/sammarbeid.jpg" alt="">
+        </section>
+        <section id="sammarbeid-tekst2">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <br>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <br>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <br>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </section>
+        <section class="bilde4">
+          <img src="samBilde/adam.jpg" alt="Logoen til Adams matkasse">
+        </section>
+        <section class="bilde4">
+          <img src="samBilde/godt.png" alt="Logoen til Godtlevert">
+        </section>
+        <section class="bilde4">
+          <img src="samBilde/morgen.png" alt="Logoen til Morgelevering">
+        </section>
+        <section class="bilde4">
+          <img src="samBilde/snol2.jpeg" alt="Logoen til Bunnpris sin Snål">
+        </section>
+    </main>
+    <footer>
+      <section id="headFooter">
+        <section>
+          <h4>Kontakt Oss</h4>
+        </section>
+        <section>
+          <h4>Følg Oss</h4>
+        </section>
+        <section>
+          <h4>Ledige Stillinger</h4>
+        </section>
+      </section>
+      <section id="bodyFooter">
+        <section>
+          <li><a href="kontakt.html">Trykk her</a></li>
+          <li>+47 123 45 678</li>
+        </section>
+        <section>
+          <h3><a href="https://www.instagram.com/rare_._hare/" class="fa fa-instagram"></a></h3>
+        </section>
+        <section>
+          <p>Kontakt oss for å vite mer</p>
+        </section>
+      </section>
+    </footer>
+  </body>
+</html>

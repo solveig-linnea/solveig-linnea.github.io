@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Rare Hare | Om Oss</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="shortcut icon" href="indexBilde/logoHare.png">
+  </head>
+  <body>
+    <header>
+      <section id="Navbar-original">
+        <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+          <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Lukk &times;</button>
+          <a href="nyheter.html" class="w3-bar-item w3-button">Nyheter</a>
+          <a href="kontakt.html" class="w3-bar-item w3-button">Kontakt oss</a>
+          <a href="butikk.html" class="w3-bar-item w3-button">Butikk</a>
+          <a href="medlem.html" class="w3-bar-item w3-button">Bli Medlem</a>
+          <a href="sammarbeid.html" class="w3-bar-item w3-button">Sammarbeid med oss</a>
+        </div>
+      </section>
+      <div id="main">
+        <div class="w3-teal">
+          <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+          <div class="nav-bar">
+            <a href="oss.html" class="textNav">Om Oss</a>
+            <a href="nyheter.html" class="textNav">Nyheter</a>
+            <a href="index.html"><img src="indexBilde/Vare-Hare1.png" alt="Bilde av logoen vår"></a>
+            <a href="butikk.html" class="textNav">Butikk</a>
+            <a href="medlem.html" class="textNav">Bli Medlem</a>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function w3_open() {
+          document.getElementById("main").style.marginLeft = "25%";
+          document.getElementById("mySidebar").style.width = "25%";
+          document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("openNav").style.display = 'none';
+        }
+        function w3_close() {
+          document.getElementById("main").style.marginLeft = "0%";
+          document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("openNav").style.display = "inline-block";
+        }
+        function kontakt() {
+          var x = document.getElementById("snackbar");
+          x.className = "show";
+          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+      </script>
+    </header>
+    <main>
+      <div class="row">
+        <div class="leftcolumn">
+          <div class="card">
+            <h1>Om Oss</h1>
+            <h5>Se på hvordan bedriften vår er satt sammen, 21 april, 2019</h5>
+            <img src="ossBilde/Infrastruktur.png" id="ossBilde" alt="Bilde av vårt organisasjonskart">
+            <p> Vi i Rare Hare jobber for å redusere det store matsvinnet som er i dagens samfunn. I året kaster nordmenn rundt 385 000 tonn spiselig mat fra matindustrien, dagligvarehandel, i serveringsbransjen og hos forbrukerne. Vi i Rare Hare ønsker å tilrettelegge for at du skal kunne være med på å bidra til at miljøsvinet skal gå ned. </p>
+            <a href="omOssUnder.html">Les Mer</a>
+          </div>
+          <div class="card">
+            <h1>Intervju</h1>
+            <h5>Se da noen i ledelsen og en våre ansatte ble intervjuet, 15 april, 2019</h5>
+              <video src="RareVid.mp4" controls poster="ossBilde/vid.png"></video>
+            <p> Vi i Rare Hare jobber for å redusere det store matsvinnet som er i dagens samfunn. I året kaster nordmenn rundt 385 000 tonn spiselig mat fra matindustrien, dagligvarehandel, i serveringsbransjen og hos forbrukerne. Vi i Rare Hare ønsker å tilrettelegge for at du skal kunne være med på å bidra til at miljøsvinet skal gå ned. </p>
+          </div>
+        </div>
+        <div class="rightcolumn">
+          <div class="card">
+            <h1>Daglig Leder </h1>
+            <img src="ossBilde/jakob.jpg" id="ossBilder" alt="Bilde av daglig leder Jakob">
+            <p>Daglig leder/kjøpmann, Jakob Lie Tønnesen: daglig leder har ansvaret for alle avdelingene samt innkjøp. Vi kombinerer disse rollene fordi vi etter som både bedriften er liten i forhold til et stort konsern og derfor kutter man ned på ansatte. Og med gode avdelingsleder vil det ikke være så mye å gjøre for daglig leder med mindre det kommer store beslutninger som må tas. </p>
+            <a href="leder.html">Les Mer</a>
+          </div>
+          <div class="card">
+            <h2>Oss</h2>
+            <p>Vi har flere sider</p>
+            <ul>
+              <li><a href="butikk.html">Butikk</a></li>
+              <li><a href="nyheter.html">Nyheter</a></li>
+              <li><a href="medlem.html">Bli medlem hos oss</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <section id="headFooter">
+        <section>
+          <h4>Kontakt Oss</h4>
+        </section>
+        <section>
+          <h4>Følg Oss</h4>
+        </section>
+        <section>
+          <h4>Ledige Stillinger</h4>
+        </section>
+      </section>
+      <section id="bodyFooter">
+        <section>
+          <li><a href="kontakt.html">Trykk her</a></li>
+          <li>+47 123 45 678</li>
+        </section>
+        <section>
+          <h3><a href="https://www.instagram.com/rare_._hare/" class="fa fa-instagram"></a></h3>
+        </section>
+        <section>
+          <p>Kontakt oss for å vite mer</p>
+        </section>
+      </section>
+    </footer>
+  </body>
+</html>

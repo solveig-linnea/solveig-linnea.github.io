@@ -1,0 +1,296 @@
+{
+  "varer":{
+    "Rot":{
+      "Gulrot":{
+          "name":"Gulrot",
+          "ImageURL":"Gulrotter.jpg",
+          "tekst":"<p>Gulrot trives både i varme og kalde strøk og dyrkes over store deler av verden. Den friske, oransje fargen kommer av betakaroten, som blir til vitamin A i kroppen vår. Det finnes mange forskjellige typer gulrot, og de varierer i størrelse, fasong og farge. I tillegg til den vanlige oransje, finnes det sorte, lilla, gule og hvite gulrøtter. De lilla gulrøttene ble først brukt som fargestoff, og først på 1800-tallet ble det populært å dyrke de oransje gulrøttene vi kjenner best.</p><p>Noen gulrøtter blir lange og spisse, andre mer butte i fasongen, og noen nesten helt runde. Gulrot er en av de mest brukte grønnsakene i Norge. Den selges både i bunter med gresset på og pakket i poser eller beger</p>",
+          "Vekt": 1,
+          "pris": 11
+      },
+      "Blomkaal":{
+          "name":"Blomkål",
+          "ImageURL":"Blomkaal.jpg",
+          "tekst":"<p>Blomkål er nydelig kokt, gratinert, frityrstekt, i kremer, i supper, i gratenger, i gryter, i wok og stuinger. Rå blomkål i små buketter er godt i salater eller som snack. Blomkål i tykke skiver er nydelig å grille. Raspet blomkål kan brukes i stedet for ris. </p>",
+          "Vekt": 1,
+          "pris": 23
+      },
+      "Rodbeter":{
+          "name":"Rødbeter",
+          "ImageURL":"Rodbeter.jpg",
+          "tekst":"<p>Rødbete kan være flatrunde, runde, ovale eller sylindriske. Mest vanlig for salg hos oss er de runde. Rødbetens spesielle dype røde farge skyldes to naturlige fargestoffer. Det ene heter betacyanin og gir en rødfiolett farge, mens det andre fargestoffet gir en gul farge. Fargen kan variere mellom variantene, men yngre rødbeter har gjerne mer fiolett farge enn de større og eldre. Om sommeren selges rødbeter i bunt med bladvekst, om vinteren uten blader i løs vekt.</p>",
+          "Vekt": 1,
+          "pris": 17
+      },
+      "Ingefaer":{
+          "name":"Ingefær",
+          "ImageURL":"Ingefaer.jpg",
+          "tekst":"<p>På ingefæren er det den kraftige underjordiske stengelknollen som brukes. Den spesielle fasongen kommer av flere bladskudd og utvekster under vekstperioden. Ingefær er lys brun utvendig med en svak gulgrønn farge innvendig. Hvis man knekker knollen over kjenner man straks dens friske duft. Duften kommer fra plantens eteriske oljer som inneholder aromatene zingeron og gingerol. Ingefær brukes som krydder på linje med den tørkede varianten, men har en langt friskere smak fersk enn tørket.</p>",
+          "Vekt": 1,
+          "pris": 10
+      },
+      "Nepe":{
+          "name":"Nepe",
+          "ImageURL":"Nepe.png",
+          "tekst":"<p>Den er en velsmakende delikatesse med sin milde, litt pepperaktig og søtlige smak. Den kan minne om en blanding av reddik og kålrabi. Den blir skarpere i smak med alderen.</p>",
+          "Vekt": 1,
+          "pris": 20
+      },
+      "Sellerirot":{
+          "name":"Sellerirot",
+          "ImageURL":"Sellerirot.jpg",
+          "tekst":"<p>Sellerirot er en lysebrun, rund og knudret rotknoll. Det sprø og hvite fruktkjøttet er rikt på eteriske oljer og har en aromatisk duft, og en litt skarp søtlig smak. Sellerirot selges i begynnelsen av sesongen som bunterot med gresset hengende på. Dette gresset kan godt brukes, fersk eller tørket. Utover høsten og vinteren selges avskårne og pussede røtter, hele eller i stykker som er plastpakket.</p>",
+          "Vekt": 1,
+          "pris": 33
+      }
+    },
+    "Gronnsaker":{
+        "Agurk":{
+            "name":"Agurk",
+            "ImageURL":"Agurk.jpg",
+            "tekst":"<p>Agurken er topp som topping på brødskiva og som et sunt alternativ til fredagskosen. De fleste kjenner slangeagurken, men det finnes flere spennende alternativer.</p><p>Snackagurk er en mindre og søtere agurk, og bruksområdet er akkurat som navnet tilsier. Agurken som brukes til sylting er en bitrere versjon av denne, og er fin på hamburger eller i sandwicher. Bruk slangeagurken i tzatziki eller prøv deg på en agurksmoothie? Grønnsaken er tilnærmet fri for kalorier, inneholder 97 % vann og kan dyrkes i nærningstilsatt vann alene – helt uten jord!</p>",
+            "Vekt": 1,
+            "pris": 23
+        },
+        "Avokado":{
+            "name":"Avokado",
+            "ImageURL":"Avokado.jpg",
+            "tekst":"<p>Avokado er en av de viktigste ingrediensene i det smaksrike, latinamerikanske kjøkkenet. Avokado inneholder også en del fett, men heldigvis handler det om det sunne fettet.</p><p>Den er hovedingrediensen i guacamole, men avokado egner seg ikke bare til meksikansk mat. Den passer godt til norske grill- og kjøttretter, og den milde smaken og kremaktige konsistensen egner seg godt til å balansere sterkere smaker. Selv om den inneholder mye fett kan du spise avokado hver dag.</p>",
+            "Vekt": 1,
+            "pris": 25
+        },
+        "Brokkoli":{
+            "name":"Brokkoli",
+            "ImageURL":"Brokkoli.jpg",
+            "tekst":"<p>Brokkoli består av flere sammensatte stilker som hver har sine egne blader og mørkegrønne blomsterknopper. Den blir også kalt aspargeskål fordi den milde gode smaken minner om asparges.</p>",
+            "Vekt": 1,
+            "pris": 28
+        },
+        "Paprika":{
+            "name":"Paprika",
+            "ImageURL":"Paprika.jpg",
+            "tekst":"<p>Det finnes mange forskjellige sorter paprika med varierende form, farge, størrelse og smak. Alle typer paprika begynner som grønn, og noen forblir grønne, mens andre skifter farge til rød, gul, orange, hvit eller mørk fiolett. Rød og gul paprika er altså moden grønn paprika. Smaken er noe mildere hos de modne variantene enn hos grønn. Prisen er ofte også litt dyrere da de modne variantene tar lengre tid å dyrke frem.</p><p>Rød paprika er mest vanlig. Den finnes hele året, og har en mild og fin smak. Grønn paprika er noe beskere på smak enn f.eks. gul og rød, men er ofte rimeligere i innkjøp. Grønn paprika finnes hele året. Gul paprika har samme egenskapene som rød paprika. Den er mild og god i smaken og finnes hele året.</p>",
+            "Vekt": 1,
+            "pris": 19
+        },
+        "Chili":{
+            "name":"Chili",
+            "ImageURL":"Chilipepper.jpg",
+            "tekst":"<p>Chili finnes både rød og grønn. Det er stoffet capsaicin som gir chili sin karakteristiske meget sterke smak. Heten sitter i stilken før chilien blir høstet. Når chilien høstes renner væsken ned i membranen og fordeler seg ut i frøene og på innsiden av chilien. Smaken er gjerne sterkest hos de mindre typene chili, mens de lengre og større variantene kan være noe mildere. Chili er ofte spissformet i fasong, men kan variere mye i lengde, farge og styrke. I umoden tilstand er alle chili grønne, men noen skifter farge ved modenhet til rød, rødgul eller gul. Det finnes veldig mange forskjellige varianter av chili som selges ferskt, tørket eller røkt.</p>",
+            "Vekt": 1,
+            "pris": 7
+        }
+      },
+    "Frukt":{
+      "Appelsiner":{
+          "name":"Appelsiner",
+          "ImageURL":"Appelsiner.jpg",
+          "tekst":"<p>Appelsin smaker herlig på skituren, men visste du at den også kan gjøre magiske ting på kjøkkenet.</p><p>Prøv deg fram med appelsin i matlagingen, for med sin syre og sødme er den en fantastisk smaksetter. Bruk den i dressinger, til fjærkre og ikke minst i salater. Skallet (unntatt det hvite, som er bittert) kan også brukes i mat, raspet fint i sjokoladekake for eksempel. Større biter kokt med i sauser gir en fin syrlighet, og gir julegløggen ekstra smak.</p>",
+          "Vekt": 1,
+          "pris": 11
+      },
+      "Bananer":{
+          "name":"Bananer",
+          "ImageURL":"Bananer.jpg",
+          "tekst":"<p>Bananen er suveren som mellommåltid, se ernæring.</p><p>Bananene du kjøper i Norge er Cavendish-bananer som er smaksrike, søte og myke i kjøttet. Denne sorten er best naturell, fordi banankjøttet i liten grad tåler varmebehandling. Men visste du at det også finnes kokebananer? Disse minner i bruk og smak om poteten og brukes varme.</p>",
+          "Vekt": 1,
+          "pris": 6
+      },
+      "Epler":{
+          "name":"Epler",
+          "ImageURL":"Epler.jpg",
+          "tekst":"<p>Røde, gule, grønne – epler kommer i mange ulike farger, størrelser og smaker. Epler er en fin kilde til kostfiber, spesielt om du spiser dem med skallet på. Nyt dem som de er, del opp i ønskede biter til snacks eller bruk dem i matlaging. Epler er nydelig i kaker og salater, som syltetøy eller drikke. Prøv å lage nypresset eplejuice av din favoritteplesort!</p>",
+          "Vekt": 1,
+          "pris": 10
+      },
+      "Paerer":{
+          "name":"Pærer",
+          "ImageURL":"Paerer.jpg",
+          "tekst":"<p>Pære er en av de eldste fruktene vi kjenner til og dyrking skal ha skjedd allerede 3000 år f.Kr. Her i landet har frukten vært kjent siden middelalderen og finnes i dag i en rekke forskjellige varianter. Mesteparten av de pærene som omsettes i Norge importeres. Pærer krever et varmere og tørrere klima enn eple og produksjonen i Norge er liten. De fleste pærene er grønne i skallet, men det finnes også røde, brune og gulgrønne. Fruktkjøttet er hvitt og hardt før pæren er moden. Moden pære er myk og saftig med aromatisk smak.</p>",
+          "Vekt": 1,
+          "pris": 14
+        },
+      "Druer":{
+          "name":"Druer",
+          "ImageURL":"Druer.jpg",
+          "tekst":"<p>Druer er noe de fleste liker, og har du først begynt, skal det godt gjøres å spise bare én. Søte og saftige eller syrlige og litt bitre – drueslagene finnes det mange av, og de ulike sortene har ulike smaker og egenskaper. Nyt dem som de er, ha dem i fruktsalaten eller prøv en skål med blå, oppdelte druer neste gang du serverer taco. De gir en herlig, søt kontrast til det sterke og salte.</p>",
+          "Vekt": 1,
+          "pris": 12
+        }
+      },
+      "Poteter":{
+    "Pot001":{
+      "name":"Ratte Peat",
+      "ImageURL":"Rattepeat.jpg",
+      "tekst":"<p>Ratte Peat er en fransk delikatessepotet med små avlange knoller som minner om mandelpotet. Skallet og fruktkjøttet er hvitt. Det er en god matpotet som blir litt melen ved koking, men koker ikke så lett i stykker.</p>",
+      "Vekt": 1,
+      "pris": 50
+    },
+    "Pot002":{
+      "name":"Amandine",
+      "ImageURL":"Amandine.jpg",
+      "tekst":"<p>Amandine er en fast potet med mild smak, og egner seg blant annet til helsteking.</p><p>Poteten er gul i skallet og kjøttet, og kokefaste i konsistensen. Amandine kan gjerne kokes med skallet på, og koketiden på potetene avhenger av størrelsen.</p>",
+      "Vekt": 1,
+      "pris": 44
+    },
+    "Pot003":{
+      "name":"Asterix",
+      "ImageURL":"Asterix.jpg",
+      "tekst":"<p>Asterix er en halvsen sort. Den har langeovale knoller med rødt skall og lys gult fruktkjøtt. Asterix har god holdbarhet. Den kan ligne litt på Beate av utseende. Asterix har høyt tørrstoffinnhold, og er en god matpotet som er lett å koke og lett å skrelle.</p>",
+      "Vekt": 1,
+      "pris": 40
+    },
+    "Pot004":{
+      "name":"Søtpotet",
+      "ImageURL":"Sotpotet.jpg",
+      "tekst":"<p>Til tross for navnet er søtpoteten ikke i slekt med vanlig potet selv om bruksområdene kan være like. Søtpoteten er avlang i formen og kan bli ganske stor. Den har varianter med både orange og hvitt fruktkjøtt. Den orange varianten er mest vanlig. Fargen på skallet kan variere fra lys brunt til rødt. Smaken er som nevnt søtaktig og kan minne om en søt gulrot. Søtpotet får en myk og kremaktig konsistens etter varmebehandling.</p>",
+      "Vekt": 1,
+      "pris": 17
+      }
+    }
+  },
+  "handlekurv": {
+    "Gulrot":{
+        "name":"Gulrot",
+        "ImageURL":"Gulrotter.jpg",
+        "tekst":"<p>Gulrot trives både i varme og kalde strøk og dyrkes over store deler av verden. Den friske, oransje fargen kommer av betakaroten, som blir til vitamin A i kroppen vår. Det finnes mange forskjellige typer gulrot, og de varierer i størrelse, fasong og farge. I tillegg til den vanlige oransje, finnes det sorte, lilla, gule og hvite gulrøtter. De lilla gulrøttene ble først brukt som fargestoff, og først på 1800-tallet ble det populært å dyrke de oransje gulrøttene vi kjenner best.</p><p>Noen gulrøtter blir lange og spisse, andre mer butte i fasongen, og noen nesten helt runde. Gulrot er en av de mest brukte grønnsakene i Norge. Den selges både i bunter med gresset på og pakket i poser eller beger</p>",
+        "Vekt": 1,
+        "pris": 11
+    },
+    "Blomkaal":{
+        "name":"Blomkål",
+        "ImageURL":"Blomkaal.jpg",
+        "tekst":"<p>Blomkål er nydelig kokt, gratinert, frityrstekt, i kremer, i supper, i gratenger, i gryter, i wok og stuinger. Rå blomkål i små buketter er godt i salater eller som snack. Blomkål i tykke skiver er nydelig å grille. Raspet blomkål kan brukes i stedet for ris. </p>",
+        "Vekt": 1,
+        "pris": 23
+    },
+    "Rodbeter":{
+        "name":"Rødbeter",
+        "ImageURL":"Rodbeter.jpg",
+        "tekst":"<p>Rødbete kan være flatrunde, runde, ovale eller sylindriske. Mest vanlig for salg hos oss er de runde. Rødbetens spesielle dype røde farge skyldes to naturlige fargestoffer. Det ene heter betacyanin og gir en rødfiolett farge, mens det andre fargestoffet gir en gul farge. Fargen kan variere mellom variantene, men yngre rødbeter har gjerne mer fiolett farge enn de større og eldre. Om sommeren selges rødbeter i bunt med bladvekst, om vinteren uten blader i løs vekt.</p>",
+        "Vekt": 1,
+        "pris": 17
+    },
+    "Ingefaer":{
+        "name":"Ingefær",
+        "ImageURL":"Ingefaer.jpg",
+        "tekst":"<p>På ingefæren er det den kraftige underjordiske stengelknollen som brukes. Den spesielle fasongen kommer av flere bladskudd og utvekster under vekstperioden. Ingefær er lys brun utvendig med en svak gulgrønn farge innvendig. Hvis man knekker knollen over kjenner man straks dens friske duft. Duften kommer fra plantens eteriske oljer som inneholder aromatene zingeron og gingerol. Ingefær brukes som krydder på linje med den tørkede varianten, men har en langt friskere smak fersk enn tørket.</p>",
+        "Vekt": 1,
+        "pris": 10
+    },
+    "Nepe":{
+        "name":"Nepe",
+        "ImageURL":"Nepe.png",
+        "tekst":"<p>Den er en velsmakende delikatesse med sin milde, litt pepperaktig og søtlige smak. Den kan minne om en blanding av reddik og kålrabi. Den blir skarpere i smak med alderen.</p>",
+        "Vekt": 1,
+        "pris": 20
+    },
+    "Sellerirot":{
+        "name":"Sellerirot",
+        "ImageURL":"Sellerirot",
+        "tekst":"<p>Sellerirot er en lysebrun, rund og knudret rotknoll. Det sprø og hvite fruktkjøttet er rikt på eteriske oljer og har en aromatisk duft, og en litt skarp søtlig smak. Sellerirot selges i begynnelsen av sesongen som bunterot med gresset hengende på. Dette gresset kan godt brukes, fersk eller tørket. Utover høsten og vinteren selges avskårne og pussede røtter, hele eller i stykker som er plastpakket.</p>",
+        "Vekt": 1,
+        "pris": 33
+    },
+    "Agurk":{
+        "name":"Agurk",
+        "ImageURL":"Agurk.jpg",
+        "tekst":"<p>Agurken er topp som topping på brødskiva og som et sunt alternativ til fredagskosen. De fleste kjenner slangeagurken, men det finnes flere spennende alternativer.</p> <p>Snackagurk er en mindre og søtere agurk, og bruksområdet er akkurat som navnet tilsier. Agurken som brukes til sylting er en bitrere versjon av denne, og er fin på hamburger eller i sandwicher. Bruk slangeagurken i tzatziki eller prøv deg på en agurksmoothie? Grønnsaken er tilnærmet fri for kalorier, inneholder 97 % vann og kan dyrkes i nærningstilsatt vann alene – helt uten jord!</p>",
+        "Vekt": 1,
+        "pris": 23
+    },
+    "Avokado":{
+        "name":"Avokado",
+        "ImageURL":"Avokado.jpg",
+        "tekst":"<p>Avokado er en av de viktigste ingrediensene i det smaksrike, latinamerikanske kjøkkenet. Avokado inneholder også en del fett, men heldigvis handler det om det sunne fettet.</p><p>Den er hovedingrediensen i guacamole, men avokado egner seg ikke bare til meksikansk mat. Den passer godt til norske grill- og kjøttretter, og den milde smaken og kremaktige konsistensen egner seg godt til å balansere sterkere smaker. Selv om den inneholder mye fett kan du spise avokado hver dag.</p>",
+        "Vekt": 1,
+        "pris": 25
+    },
+    "Brokkoli":{
+        "name":"Brokkoli",
+        "ImageURL":"Brokkoli.jpg",
+        "tekst":"<p>Brokkoli består av flere sammensatte stilker som hver har sine egne blader og mørkegrønne blomsterknopper. Den blir også kalt aspargeskål fordi den milde gode smaken minner om asparges.</p>",
+        "Vekt": 1,
+        "pris": 28
+    },
+    "Paprika":{
+        "name":"Paprika",
+        "ImageURL":"Paprika.jpg",
+        "tekst":"<p>Det finnes mange forskjellige sorter paprika med varierende form, farge, størrelse og smak. Alle typer paprika begynner som grønn, og noen forblir grønne, mens andre skifter farge til rød, gul, orange, hvit eller mørk fiolett. Rød og gul paprika er altså moden grønn paprika. Smaken er noe mildere hos de modne variantene enn hos grønn. Prisen er ofte også litt dyrere da de modne variantene tar lengre tid å dyrke frem.</p><p>Rød paprika er mest vanlig. Den finnes hele året, og har en mild og fin smak. Grønn paprika er noe beskere på smak enn f.eks. gul og rød, men er ofte rimeligere i innkjøp. Grønn paprika finnes hele året. Gul paprika har samme egenskapene som rød paprika. Den er mild og god i smaken og finnes hele året.</p>",
+        "Vekt": 1,
+        "pris": 19
+    },
+    "Chili":{
+        "name":"Chili",
+        "ImageURL":"Chilipepper.jpg",
+        "tekst":"<p>Chili finnes både rød og grønn. Det er stoffet capsaicin som gir chili sin karakteristiske meget sterke smak. Heten sitter i stilken før chilien blir høstet. Når chilien høstes renner væsken ned i membranen og fordeler seg ut i frøene og på innsiden av chilien. Smaken er gjerne sterkest hos de mindre typene chili, mens de lengre og større variantene kan være noe mildere. Chili er ofte spissformet i fasong, men kan variere mye i lengde, farge og styrke. I umoden tilstand er alle chili grønne, men noen skifter farge ved modenhet til rød, rødgul eller gul. Det finnes veldig mange forskjellige varianter av chili som selges ferskt, tørket eller røkt.</p>",
+        "Vekt": 1,
+        "pris": 7
+    },
+    "Appelsiner":{
+        "name":"Appelsiner",
+        "ImageURL":"Appelsiner.jpg",
+        "tekst":"<p>Appelsin smaker herlig på skituren, men visste du at den også kan gjøre magiske ting på kjøkkenet.</p><p>Prøv deg fram med appelsin i matlagingen, for med sin syre og sødme er den en fantastisk smaksetter. Bruk den i dressinger, til fjærkre og ikke minst i salater. Skallet (unntatt det hvite, som er bittert) kan også brukes i mat, raspet fint i sjokoladekake for eksempel. Større biter kokt med i sauser gir en fin syrlighet, og gir julegløggen ekstra smak.</p>",
+        "Vekt": 1,
+        "pris": 11
+    },
+    "Bananer":{
+        "name":"Bananer",
+        "ImageURL":"Bananer.jpg",
+        "tekst":"<p>Bananen er suveren som mellommåltid, se ernæring.</p><p>Bananene du kjøper i Norge er Cavendish-bananer som er smaksrike, søte og myke i kjøttet. Denne sorten er best naturell, fordi banankjøttet i liten grad tåler varmebehandling. Men visste du at det også finnes kokebananer? Disse minner i bruk og smak om poteten og brukes varme.</p>",
+        "Vekt": 1,
+        "pris": 6
+    },
+    "Epler":{
+        "name":"Epler",
+        "ImageURL":"Epler.jpg",
+        "tekst":"<p>Røde, gule, grønne – epler kommer i mange ulike farger, størrelser og smaker. Epler er en fin kilde til kostfiber, spesielt om du spiser dem med skallet på. Nyt dem som de er, del opp i ønskede biter til snacks eller bruk dem i matlaging. Epler er nydelig i kaker og salater, som syltetøy eller drikke. Prøv å lage nypresset eplejuice av din favoritteplesort!</p>",
+        "Vekt": 1,
+        "pris": 10
+    },
+    "Paerer":{
+        "name":"Pærer",
+        "ImageURL":"Paerer.jpg",
+        "tekst":"<p>Pære er en av de eldste fruktene vi kjenner til og dyrking skal ha skjedd allerede 3000 år f.Kr. Her i landet har frukten vært kjent siden middelalderen og finnes i dag i en rekke forskjellige varianter. Mesteparten av de pærene som omsettes i Norge importeres. Pærer krever et varmere og tørrere klima enn eple og produksjonen i Norge er liten. De fleste pærene er grønne i skallet, men det finnes også røde, brune og gulgrønne. Fruktkjøttet er hvitt og hardt før pæren er moden. Moden pære er myk og saftig med aromatisk smak.</p>",
+        "Vekt": 1,
+        "pris": 14
+      },
+    "Druer":{
+        "name":"Druer",
+        "ImageURL":"Druer.jpg",
+        "tekst":"<p>Druer er noe de fleste liker, og har du først begynt, skal det godt gjøres å spise bare én. Søte og saftige eller syrlige og litt bitre – drueslagene finnes det mange av, og de ulike sortene har ulike smaker og egenskaper. Nyt dem som de er, ha dem i fruktsalaten eller prøv en skål med blå, oppdelte druer neste gang du serverer taco. De gir en herlig, søt kontrast til det sterke og salte.</p>",
+        "Vekt": 1,
+        "pris": 12
+      },
+
+          "Pot001":{
+          "name":"Ratte Peat",
+          "ImageURL":"Rattepeat.jpg",
+          "tekst":"<p>Ratte Peat er en fransk delikatessepotet med små avlange knoller som minner om mandelpotet. Skallet og fruktkjøttet er hvitt. Det er en god matpotet som blir litt melen ved koking, men koker ikke så lett i stykker.</p>",
+          "Vekt": 1,
+          "pris": 50
+      },
+
+      "Pot002":{
+        "name":"Amandine",
+        "ImageURL":"Amandine.jpg",
+        "tekst":"<p>Amandine er en fast potet med mild smak, og egner seg blant annet til helsteking.</p><p>Poteten er gul i skallet og kjøttet, og kokefaste i konsistensen. Amandine kan gjerne kokes med skallet på, og koketiden på potetene avhenger av størrelsen.</p>",
+        "Vekt": 1,
+        "pris": 44
+      },
+      "Pot003":{
+        "name":"Asterix",
+        "ImageURL":"Asterix.jpg",
+        "tekst":"<p>Asterix er en halvsen sort. Den har langeovale knoller med rødt skall og lys gult fruktkjøtt. Asterix har god holdbarhet. Den kan ligne litt på Beate av utseende. Asterix har høyt tørrstoffinnhold, og er en god matpotet som er lett å koke og lett å skrelle.</p>",
+        "Vekt": 1,
+        "pris": 40
+      },
+      "Pot004":{
+        "name":"Søtpotet",
+        "ImageURL":"Sotpotet.jpg",
+        "tekst":"<p>Til tross for navnet er søtpoteten ikke i slekt med vanlig potet selv om bruksområdene kan være like. Søtpoteten er avlang i formen og kan bli ganske stor. Den har varianter med både orange og hvitt fruktkjøtt. Den orange varianten er mest vanlig. Fargen på skallet kan variere fra lys brunt til rødt. Smaken er som nevnt søtaktig og kan minne om en søt gulrot. Søtpotet får en myk og kremaktig konsistens etter varmebehandling.</p>",
+        "Vekt": 1,
+        "pris": 17
+          }
+        }
+      }

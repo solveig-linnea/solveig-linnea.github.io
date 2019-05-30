@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Messenger</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBKP7_7UjfintHNWQnxjTyo_pAvNtNpqM4",
+    authDomain: "chat-76224.firebaseapp.com",
+    databaseURL: "https://chat-76224.firebaseio.com",
+    projectId: "chat-76224",
+    storageBucket: "chat-76224.appspot.com",
+    messagingSenderId: "95593658602",
+    appId: "1:95593658602:web:4bc7f4a84332c5dd"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+      <section id="utesecMeldinger">
+        <div id="secMeldinger">
+
+        </div>
+      </section>
+        <form id="skjema">
+          <input id="inpMelding" type="text" name="inpMelding" value="">
+          <button  onclick="" id="btnSend" type="button" name="button">Send inn</button>
+
+        </form>
+    </main>
+    <script src="main.js" charset="utf-8"></script>
+
+    <!-- LIM INN FIREBASE-KODEN DIN HER -->
+
+</body>
+</html>

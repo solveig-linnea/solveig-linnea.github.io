@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rare Hare | Butikk</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="indexBilde/logoHare.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBAd3LbLutirw8xCVirILH3vAkJAki-3_k",
+        authDomain: "vare-hare.firebaseapp.com",
+        databaseURL: "https://vare-hare.firebaseio.com",
+        projectId: "vare-hare",
+        storageBucket: "vare-hare.appspot.com",
+        messagingSenderId: "735658736972"
+      };
+      firebase.initializeApp(config);
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="alert">
+        <p>Vi har nettopp begynt et nytt <strong>sammarbeid</strong> med Bunnpris. Du kan nå kjøpe Rare Hare varer i din nærmeste Bunnpris butikk under navnet Snål!</p>
+      </div>
+      <section id="Navbar-original">
+        <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+          <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Lukk &times;</button>
+          <a href="nyheter.html" class="w3-bar-item w3-button">Nyheter</a>
+          <a href="kontakt.html" class="w3-bar-item w3-button">Kontakt oss</a>
+          <a href="butikk.html" class="w3-bar-item w3-button">Butikk</a>
+          <a href="medlem.html" class="w3-bar-item w3-button">Bli Medlem</a>
+          <a href="sammarbeid.html" class="w3-bar-item w3-button">Sammarbeid med oss</a>
+        </div>
+      </section>
+      <div id="main">
+        <div class="w3-teal">
+          <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+          <div class="nav-bar">
+            <a href="oss.html" class="textNav">Om Oss</a>
+            <a href="nyheter.html" class="textNav">Nyheter</a>
+            <a href="index.html"><img src="indexBilde/Vare-Hare1.png" alt="Bilde av logoen vår"></a>
+            <a href="butikk.html" class="textNav">Butikk</a>
+            <a href="medlem.html" class="textNav">Bli Medlem</a>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function w3_open() {
+          document.getElementById("main").style.marginLeft = "25%";
+          document.getElementById("mySidebar").style.width = "25%";
+          document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("openNav").style.display = 'none';
+        }
+        function w3_close() {
+          document.getElementById("main").style.marginLeft = "0%";
+          document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("openNav").style.display = "inline-block";
+        }
+        function kontakt() {
+          var x = document.getElementById("snackbar");
+          x.className = "show";
+          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+      </script>
+      <div id="header-butikk">
+        <img src="nyhetBilde/snol.jpg" alt="Bile av bunnpris sin kampanje">
+      </div>
+    </header>
+    <main id="main-butikk">
+      <section class="to-del">
+        <section id="favTittle">
+          <h1>Våre Favoritter</h1>
+          <section id="fav">
+          </section>
+        </section>
+        <section id="hanTittle">
+          <h1>Handlekurv</h1>
+          <section id="handlekurv">
+          </section>
+        </section>
+      </section>
+      <article class="sorter">
+        <div id="rot" onclick="visRot()"><h6>Rotgrønnsaker</h6></div>
+        <div id="gronn" onclick="visGronn()"><h6>Grønnsaker</h6></div>
+        <div id="frukt" onclick="visFrukt()"><h6>Frukt</h6></div>
+        <div id="potet" onclick="visPotet()"><h6>Potet</h6></div>
+      </article>
+      <section>
+        <section id="secVarer">
+        </section>
+      </section>
+    </main>
+    <footer>
+      <section id="headFooter">
+        <section>
+          <h4>Kontakt Oss</h4>
+        </section>
+        <section>
+          <h4>Følg Oss</h4>
+        </section>
+        <section>
+          <h4>Ledige Stillinger</h4>
+        </section>
+      </section>
+      <section id="bodyFooter">
+        <section>
+          <li><a href="#">Trykk her</a></li>
+          <li>+47 123 45 678</li>
+        </section>
+        <section>
+          <h3><a href="https://www.instagram.com/rare_._hare/" class="fa fa-instagram"></a></h3>
+        </section>
+        <section>
+          <p>Kontakt oss for å vite mer</p>
+        </section>
+      </section>
+    </footer>
+    <script type="text/javascript">
+    const secFav = document.getElementById("fav");
+    const secHandlekurv = document.getElementById("handlekurv")
+    const secVarer = document.getElementById("secVarer");
+
+    const db = firebase.database();
+    const handlekurv = db.ref("handlekurv");
+
+    const varer = db.ref("varer");
+    const rot = db.ref("varer/Rot");
+    const gronnsaker = db.ref("varer/Gronnsaker");
+    const frukt = db.ref("varer/Frukt");
+    const poteter = db.ref("varer/Poteter");
+
+
+    visAlleVarer();
+    visBestSellere();
+
+    function visAlleVarer(){
+      secVarer.innerHTML = ``;
+      rot.on("child_added",genererHTML);
+      frukt.on("child_added",genererHTML);
+      gronnsaker.on("child_added",genererHTML);
+      poteter.on("child_added",genererHTML);
+    }
+    function genererHTML(snapshot) {
+      let parent = snapshot.ref.parent.key;
+      let key = snapshot.key;
+      let ref = parent+"/"+key;
+      let vare = snapshot.val();
+
+      //HTML som blir generert
+      secVarer.innerHTML += `
+        <section class="vare">
+          <a href="vare.html?id=${ref}">
+          <img src=Handlekurv/${vare.ImageURL} alt="Bilde av varen du har valgt">
+            <h3>${vare.pris},00 NOK pr.kg</h3>
+            <hr>
+            <p>${vare.Vekt},00 kg</p>
+            <h3>${vare.name}</h3>
+          </a>
+        </section>
+      `;
+    }
+
+    function visBestSellere(){
+      secFav.innerHTML = ``;
+      handlekurv.limitToFirst(2).on("child_added", genererBestHTML);
+    }
+    function genererBestHTML(snapshot) {
+      let parent = snapshot.ref.parent.key;
+      let key = snapshot.key;
+      let ref = parent+"/"+key;
+      let vare = snapshot.val();
+      secFav.innerHTML += `
+        <section class="vare">
+          <a href="vare.html?id=${ref}">
+            <img src=Handlekurv/${vare.ImageURL} alt="Bilde av varen du har valgt">
+            <h2>${vare.pris},00 NOK pr.kg</h2>
+            <hr>
+            <p>${vare.Vekt},00 kg</p>
+            <h2>${vare.name}</h2>
+          </a>
+        </section>
+      `;
+    }
+
+    function visRot(){
+      secVarer.innerHTML = ``;
+      rot.orderByChild("name").on("child_added",genererHTML);
+    }
+    function visGronn(){
+      secVarer.innerHTML = ``;
+      gronnsaker.orderByChild("name").on("child_added",genererHTML);
+    }
+    function visFrukt(){
+      secVarer.innerHTML = ``;
+      frukt.orderByChild("name").on("child_added",genererHTML);
+    }
+    function visPotet(){
+      secVarer.innerHTML = ``;
+      poteter.orderByChild("name").on("child_added",genererHTML);
+    }
+    </script>
+
+  </body>
+</html>

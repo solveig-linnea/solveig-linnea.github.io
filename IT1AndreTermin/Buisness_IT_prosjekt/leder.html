@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Rare Hare | Daglig Leder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="shortcut icon" href="indexBilde/logoHare.png">
+  </head>
+  <body>
+    <header>
+      <section id="Navbar-original">
+        <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+          <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Lukk &times;</button>
+          <a href="nyheter.html" class="w3-bar-item w3-button">Nyheter</a>
+          <a href="kontakt.html" class="w3-bar-item w3-button">Kontakt oss</a>
+          <a href="butikk.html" class="w3-bar-item w3-button">Butikk</a>
+          <a href="medlem.html" class="w3-bar-item w3-button">Bli Medlem</a>
+          <a href="sammarbeid.html" class="w3-bar-item w3-button">Sammarbeid med oss</a>
+        </div>
+      </section>
+      <div id="main">
+        <div class="w3-teal">
+          <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+          <div class="nav-bar">
+            <a href="oss.html" class="textNav">Om Oss</a>
+            <a href="nyheter.html" class="textNav">Nyheter</a>
+            <a href="index.html"><img src="indexBilde/Vare-Hare1.png" alt="Bilde av logoen vår"></a>
+            <a href="butikk.html" class="textNav">Butikk</a>
+            <a href="medlem.html" class="textNav">Bli Medlem</a>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function w3_open() {
+          document.getElementById("main").style.marginLeft = "25%";
+          document.getElementById("mySidebar").style.width = "25%";
+          document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("openNav").style.display = 'none';
+        }
+        function w3_close() {
+          document.getElementById("main").style.marginLeft = "0%";
+          document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("openNav").style.display = "inline-block";
+        }
+        function kontakt() {
+          var x = document.getElementById("snackbar");
+          x.className = "show";
+          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+      </script>
+    </header>
+    <main>
+      <div class="row">
+        <div class="leftcolumn2">
+          <div class="card">
+            <h1>Om Oss</h1>
+            <h5>Her kan du lese mer om de forskjllige rollene til ledelsen, April 23, 2019</h5>
+            <div id="ossBilder"><img src="ossBilde/ansatt.jpg" alt="Tegning av flere ansatte"></div>
+            <div id="ossAnsatteTekst">
+              <div>
+                <h3>Daglig Leder</h3>
+                <p>Jakob Lie Tønnesen: daglig leder har
+                  ansvaret for alle avdelingene samt innkjøp. Vi kombinerer disse
+                   rollene fordi vi etter som både bedriften er liten i forhold
+                   til et stort konsern og derfor kutter man ned på ansatte. Og
+                    med gode avdelingsleder vil det ikke være så mye å gjøre for
+                    daglig leder med mindre det kommer store beslutninger som må tas.</p>
+                    <br>
+                    <h3>Økonomi Ansvarlig</h3>
+                <p>Solvei Jørgensen: Har ansvar for løpende inn- og
+                   utbetalinger, utarbeidelse av budjsetter og regnskap, økonomisk styring,
+                   selskapets finiansiering samt løpende risikovurderinger og kontroll.</p>
+                   <br>
+                   <h3>Lager/logistikk Ansvarlig</h3>
+                 <p>Erich Eichman: Etter som det er en primær
+                    netthandel så er lager og logistikk et av de viktigste punktene. Det er
+                    også derfor det er avdelingen med flest ansatte. Sjefen vil ha ansvaret
+                    for lagring av alle innkjøpte varer, i tillegg til å sørge for at alle
+                    varer kommer frem dit de skal. Det vil si at varene kommer frem til de
+                    som har bestilt på nett eller de bedriftene som vi samarbeider med.</p>
+                    <br>
+                    <h3>Skiftleder morgen Ansvarlig</h3>
+                <p>Per Persson, Skiftleder dag Ansvarlig,
+                    Sven Svensson: deres rolle er å organisere ansatte. Det vil si at de
+                    ansetter og sparker som de ser nødvendig. Morgen skiftene trengs fordi
+                    utskiping av varer må skje tidlig om morgenen. Dag skiftene er helt vanlig skift.</p>
+                    <br>
+                    <h3>Markedsføring/salg/butikk/PR kontakt</h3>
+                <p> Karoline Storlien: Som det ligger i ordet
+                    har denne avdelingen tre poster. Markedsføringen, som skal ha kontroll
+                    på markedsføringsstrategien og kanalene vi skal markedsføre oss på,
+                    reklame, og PR, sosiale media. Sosiale media faller under en underavdeling
+                    etter som det er en veldig krevende Plattform som veldig mange av vår målgruppe
+                    er på, hipstere. Salg og butikk går litt under ett. De skal passe på at slaget
+                    på nettbutikken.</p>
+                    <br>
+                    <h3>IT sjef</h3>
+                <p> Thomas Winterbourne: etter som vi er primært nettbasert
+                    blir det nest største behovet for ansatte og kompetanse på nett.
+                    Det er også derfor vi har fordelt IT i brukerstøtte, Infrastruktur
+                    og Applikasjoner. Dette fordi kunden skal ha et bredt tilbud og føle
+                    seg ivaretatt på nett. </p>
+                    <br>
+                    <h3>Brukerstøtte</h3>
+                <p>Martin Coward: har ansvaret for å hjelpe kunder
+                    som har problemer med navigering på nettsiden eller andre nett problem.
+                    Herr Coward er ansvarlig for Call senteret. </p>
+                    <br>
+                    <h3>Infrastruktur</h3>
+                <p> Baltacar Kirstian: har ansvaret for at systemet
+                    fungerer slik det skal. Altså at databasen er sikker og at nettsiden ikke har problemer. </p>
+                    <br>
+                    <h3>Applikasjoner</h3>
+                <p> Nadia Sabrina: Appen vår blir operert av Nadia.
+                    Hun passer på at alt fungerer som det skal og at appen blir oppdatert. </p>
+              </div>
+              <div>
+                <img src="ossBilde/jobb.jpeg" alt="">
+                <img src="ossBilde/jobb1.jpeg" alt="">
+                <img src="ossBilde/jobb2.jpeg" alt="">
+                <img src="ossBilde/jobb3.jpeg" alt="">
+
+              </div>
+            </div>
+          </div>
+    </main>
+    <footer>
+      <section id="headFooter">
+        <section>
+          <h4>Kontakt Oss</h4>
+        </section>
+        <section>
+          <h4>Følg Oss</h4>
+        </section>
+        <section>
+          <h4>Ledige Stillinger</h4>
+        </section>
+      </section>
+      <section id="bodyFooter">
+        <section>
+          <li><a href="kontakt.html">Trykk her</a></li>
+          <li>+47 123 45 678</li>
+        </section>
+        <section>
+          <h3><a href="https://www.instagram.com/rare_._hare/" class="fa fa-instagram"></a></h3>
+        </section>
+        <section>
+          <p>Kontakt oss for å vite mer</p>
+        </section>
+      </section>
+    </footer>
+  </body>
+</html>

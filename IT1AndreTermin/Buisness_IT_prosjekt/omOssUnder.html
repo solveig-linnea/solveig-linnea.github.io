@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Rare Hare | Om Oss</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="shortcut icon" href="indexBilde/logoHare.png">
+  </head>
+  <body>
+    <header>
+      <section id="Navbar-original">
+        <section id="Navbar-original">
+          <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+            <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Lukk &times;</button>
+            <a href="nyheter.html" class="w3-bar-item w3-button">Nyheter</a>
+            <a href="kontakt.html" class="w3-bar-item w3-button">Kontakt oss</a>
+            <a href="butikk.html" class="w3-bar-item w3-button">Butikk</a>
+            <a href="medlem.html" class="w3-bar-item w3-button">Bli Medlem</a>
+            <a href="sammarbeid.html" class="w3-bar-item w3-button">Sammarbeid med oss</a>
+          </div>
+        </section>
+        <div id="main">
+          <div class="w3-teal">
+            <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+            <div class="nav-bar">
+              <a href="oss.html" class="textNav">Om Oss</a>
+              <a href="nyheter.html" class="textNav">Nyheter</a>
+              <a href="index.html"><img src="indexBilde/Vare-Hare1.png" alt="Bilde av logoen vår"></a>
+              <a href="butikk.html" class="textNav">Butikk</a>
+              <a href="medlem.html" class="textNav">Bli Medlem</a>
+            </div>
+          </div>
+        </div>
+
+      <script>
+        function w3_open() {
+          document.getElementById("main").style.marginLeft = "25%";
+          document.getElementById("mySidebar").style.width = "25%";
+          document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("openNav").style.display = 'none';
+        }
+        function w3_close() {
+          document.getElementById("main").style.marginLeft = "0%";
+          document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("openNav").style.display = "inline-block";
+        }
+        function kontakt() {
+          var x = document.getElementById("snackbar");
+          x.className = "show";
+          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+      </script>
+    </header>
+    <main>
+      <div class="row">
+        <div class="leftcolumn2">
+          <div class="card2">
+            <h1>Om Oss</h1>
+            <div id="ossAnsatteTekst">
+              <div>
+                <h3>Hvem er vi?</h3>
+                <p>Vi i Rare Hare jobber for å redusere det store matsvinnet som
+                  er i dagens samfunn. I året kaster nordmenn rundt 385 000 tonn
+                  spiselig mat fra matindustrien, dagligvarehandel, i serveringsbransjen
+                  og hos forbrukerne. Vi i Rare Hare ønsker å tilrettelegge for at du skal
+                  kunne være med på å bidra til at miljøsvinet skal gå ned.</p>
+                  <br>
+                  <h3>Hva er visjonen?</h3>
+                <p>Visjon vår er å minnemere matsvinn i norge og bremse klimaendringene.
+                  Vi har også en misjon om at skap skal kunne være lønnsomme og miljøvennlige,
+                  uten at det går ut over kundene. Forretningsidèn til RareHare er å jobbe
+                  for å redusere matsvinnet som er i dagenssamfunn gjennom å gi kunder muligheten
+                  til å kjøpe det som ellers ville bli kastet. Vi skal være til å stole på, og
+                  alt vi gjør er for å bedre miljøet og redusere matsvinn. </p>
+                  <br>
+                  <h3>Hva slags organisasjon er det?</h3>
+                <p> Dette er en linje- og stabsorganisasjon, med en daglig leder og
+                   med avdelinger (staber) med hvert sitt ansvarsområdet. I organisasjonen
+                   er det lagt tung vekt på nettsiden og lager og logistikk, derfor så
+                   mange ansatte innenfor IT og lager logistikk.</p>
+                   <br>
+                   <h3>Når startet bedriften?</h3>
+                <p> Vi startet bedriften i høsten av 2018 og gjorde dette etter
+                  som vi så hvilket svinn som kom som et resultat av sortering av
+                  frukt og grønt. Vi lever i en tid hvor miljøbevissthet er viktigere
+                  enn noen gang. Dette utgjør våre kjerneverdier. Vårt mål er å få
+                  omgjort folks holdninger til frukt og grønt med annen form og fasong
+                  enn vanlig. På denne måten håper vi å yte vårt for miljøet. </p>
+                  <br>
+                  <h3>Hvem samarbeider dere med?</h3>
+                <p>Vi har flere samarbeidspartnere som gir oss muligheten til å frakte
+                  varer miljøvennlig. Bunnpris, sprer bevissthet og produktene våre til
+                  dagligvaremarkedet.  Adamsmatkasse, morgenlevering og godt levert,
+                  de bruker produktene våre i leveransene sine. Vi tilbyr også en
+                  nettbutikk hvor mye inspirasjon er fra kolonial.no. Man kjøper
+                  produktene på nettsiden vår også kjøper vi varene til dere i en
+                  hydrogen lastebil med solcelle på taket og ekstra batteri. </p>
+                  <br>
+                  <h3>Hvor er produktene fra?</h3>
+                <p>Vi henter alle produktene våre hos Bama.  Bedriften er hovedsakelig
+                  finansiert av "croud funding" og offentlige investeringer. Vi får en
+                  del av investeringen av staten ettersom vi tilbyr arbeidsplasser for
+                  utviklingshemmede individer. Vi eies derimot ikke av kommunene men
+                  er en privat bedrift eid av ledelsen. </p>
+                  <br>
+                  <h3>Organisasjonsstrukturen?</h3>
+                <p> Organisasjonsstrukturen er tilpasset prioritering av salg og
+                  betjening av et marked med miljøbevisste kunder. For å unngå
+                  usikkerhet og misforståelser er det en tydelig struktur på hvem
+                  som bestemmer hva og hvem som har ansvar for hvilke områder.
+                  På denne måten kan ledelsen komme med en tidlig utkallelse om
+                  hva virksomhets ideen er og hvilket mål bedriften har. Igjen
+                  på denne måten vil ansatte lettere kunne ta beslutninger og
+                  på den måten ha en effektiv organisasjon. Vi er en
+                  Funksjonellorganisasjon etter som alle stabssjefene er ansvarlig for
+                  sitt område. På denne måten innhenter vi maksimal  kompetanse hos de ansatte. </p>
+              </div>
+              <div>
+                <img src="ossBilde/ert.jpeg" alt="">
+                <img src="ossBilde/nepe.jpeg" alt="">
+              </div>
+            </div>
+            <img src="ossBilde/Infrastruktur.png" alt="">
+          </div>
+        </main>
+        <footer>
+          <section id="headFooter">
+            <section>
+              <h4>Kontakt Oss</h4>
+            </section>
+            <section>
+              <h4>Følg Oss</h4>
+            </section>
+            <section>
+              <h4>Ledige Stillinger</h4>
+            </section>
+          </section>
+          <section id="bodyFooter">
+            <section>
+              <li><a href="kontakt.html">Trykk her</a></li>
+              <li>+47 123 45 678</li>
+            </section>
+            <section>
+              <h3><a href="https://www.instagram.com/rare_._hare/" class="fa fa-instagram"></a></h3>
+            </section>
+            <section>
+              <p>Kontakt oss for å vite mer</p>
+            </section>
+          </section>
+        </footer>
+      </body>
+    </html>

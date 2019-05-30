@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rare Hare | Kontakt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="indexBilde/logoHare.png">
+    </head>
+    <body>
+      <header>
+        <section id="Navbar-original">
+          <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+            <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Lukk &times;</button>
+            <a href="nyheter.html" class="w3-bar-item w3-button">Nyheter</a>
+            <a href="kontakt.html" class="w3-bar-item w3-button">Kontakt oss</a>
+            <a href="butikk.html" class="w3-bar-item w3-button">Butikk</a>
+            <a href="medlem.html" class="w3-bar-item w3-button">Bli Medlem</a>
+            <a href="sammarbeid.html" class="w3-bar-item w3-button">Sammarbeid med oss</a>
+          </div>
+        </section>
+        <div id="main">
+          <div class="w3-teal">
+            <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+            <div class="nav-bar">
+              <a href="oss.html" class="textNav">Om Oss</a>
+              <a href="nyheter.html" class="textNav">Nyheter</a>
+              <a href="index.html"><img src="indexBilde/Vare-Hare1.png" alt="Bilde av logoen vår"></a>
+              <a href="butikk.html" class="textNav">Butikk</a>
+              <a href="medlem.html" class="textNav">Bli Medlem</a>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          function w3_open() {
+            document.getElementById("main").style.marginLeft = "25%";
+            document.getElementById("mySidebar").style.width = "25%";
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("openNav").style.display = 'none';
+          }
+          function w3_close() {
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("openNav").style.display = "inline-block";
+          }
+          function kontakt() {
+            var x = document.getElementById("snackbar");
+            x.className = "show";
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+          }
+        </script>
+      </header>
+      <main>
+        <section id="Hei">
+          <h2>Hva kan vi hjelpe med?</h2>
+          <hr>
+        </section>
+          <div class="container-Kontakt">
+
+            <label for="fname"></label>
+            <input type="text" id="fname" name="firstname" placeholder="Name..">
+            <br>
+            <br>
+            <label for="lname"></label>
+            <input type="text" id="lname" name="lastname" placeholder="E-postadresse..">
+            <br>
+            <br>
+            <label for="lname"></label>
+            <input type="text" id="lname" name="lastname" placeholder="Gi meldingen en god tittel..">
+            <br>
+            <br>
+            <label for="subject"></label>
+            <textarea id="subject" name="subject" placeholder="Skriv meldingen din her.." style="height:200px"></textarea>
+
+            <input type="submit" onclick="kontakt()" value="Submit">
+          </div>
+        <div id="snackbar">Takk for at du kontaktet oss. Du kan nå handle videre!</div>
+      </main>
+      <footer>
+        <section id="headFooter">
+          <section>
+            <h4>Kontakt Oss</h4>
+          </section>
+          <section>
+            <h4>Følg Oss</h4>
+          </section>
+          <section>
+            <h4>Ledige Stillinger</h4>
+          </section>
+        </section>
+        <section id="bodyFooter">
+          <section>
+            <li><a href="kontakt.html">Trykk her</a></li>
+            <li>+47 123 45 678</li>
+          </section>
+          <section>
+            <h3><a href="https://www.instagram.com/rare_._hare/" class="fa fa-instagram"></a></h3>
+          </section>
+          <section>
+            <p>Kontakt oss for å vite mer</p>
+          </section>
+        </section>
+      </footer>
+    </body>
+</html>

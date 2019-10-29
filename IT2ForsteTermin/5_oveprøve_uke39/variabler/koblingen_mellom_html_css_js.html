@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      h1{
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dette er en overskrift</h1>
+
+    <script type="text/javascript">
+
+      let overskrift = document.querySelector("h1");
+
+      overskrift.onclick = function(){
+        overskrift.innerHTML = "Du trykket på meg!";
+      }
+
+    </script>
+  </body>
+</html>

@@ -4,27 +4,21 @@ let y;
 let xspeed;
 let yspeed;
 
-let dvd;
-
-function preload() {
-  dvd = loadImage("dvd.png");
-}
-
 
 function setup() {
   createCanvas(800, 600);
   x = 400;
   y = 300;
-  xspeed = 10;
-  yspeed = 10;
+  xspeed = 5;
+  yspeed = 5;
 }
 
 function draw() {
   // put drawing code here
   background(0);
-  //rect(x, y, 80, 60);
+  rect(x, y, 80, 60);
   //Tegn dvd logo
-  image(dvd, x, y, 80, 60);
+  //image(dvd, x, y, 80, 60);
 
   x = x + xspeed;
   y = y + yspeed;

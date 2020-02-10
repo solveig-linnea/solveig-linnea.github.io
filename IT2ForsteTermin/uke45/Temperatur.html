@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .soyle{
+        background-color: orange;
+        color: white;
+        margin-left: 5px;
+        width: 40px;
+        text-align: center;
+        max-height: 400px;
+      }
+      .positiv{
+        background-color: red;
+      }
+      .negativ{
+        background-color: blue;
+      }
+      .divTemp{
+        display: flex;
+        height: 400px;
+        align-items: flex-end;
+        background-color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <div class="divInput">
+        <input id="inpTemp" type="number" name="" value="" placeholder="Dagens temperatur">
+        <button id="btnTemp" type="button" name="button">Registrer temperatur</button>
+        <select id="sortering">
+          <option value="lavTilHoy">Lav til høy</option>
+          <option value="hoyTilLav">Høy til lav</option>
+
+        </select>
+      </div>
+      <div class="divTemp">
+      </div>
+    </div>
+
+    <script src="script.js" charset="utf-8"></script>
+  </body>
+</html>

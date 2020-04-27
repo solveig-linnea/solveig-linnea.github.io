@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    #bilderamme{
+      position: relative;
+      width: 607px;
+      height: 700px;
+    }
+    .muskel{
+      cursor: pointer;
+      position: absolute;
+      /*background-color: blue;*/
+    }
+    #arm{
+      width: 100px;
+      height: 50px;
+      top: 22%;
+      left: 60%;
+    }
+    #rygg{
+      width: 100px;
+      height: 100px;
+      top: 32%;
+      left: 42%;
+    }
+    #gruppe {
+      position: absolute;
+      top: 10%;
+    }
+    </style>
+  </head>
+  <body>
+    <section id="bilderamme">
+      <img src="kropp.gif" alt="">
+      <div id="arm" class="muskel">
+      </div>
+      <div id="rygg" class="muskel">
+      </div>
+      <p id="gruppe">Muskelgruppe</p>
+    </section>
+    <audio id="armLyd" src="Armstrekkeren.mp4"></audio>
+    <audio id="ryggLyd" src="brede_ryggmuskel.mp3"></audio>
+    <script type="text/javascript">
+    const arm = document.querySelector("#arm");
+    const rygg = document.querySelector("#rygg");
+    const ryggLyd = document.querySelector("#ryggLyd");
+    const armLyd = document.querySelector("#armLyd");
+    const gruppe = document.querySelector("#gruppe");
+
+    arm.onclick = function(){
+      console.log("arm");
+      armLyd.play();
+      gruppe.innerHTML = "Armstrekkeren";
+      gruppe.animate([{left: "-50%"},{left: "100%"}],{duration: 5000});
+    }
+    rygg.onclick = function(){
+      console.log("rygg");
+      ryggLyd.play();
+      gruppe.innerHTML = "Den brede Ryggmuskelen";
+      gruppe.animate([{left: "-50%"},{left: "100%"}],{duration: 5000});
+    }
+
+    </script>
+
+  </body>
+</html>

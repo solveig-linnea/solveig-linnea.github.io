@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+
+      @keyframes trekant {
+        from{
+          left: 0%;
+          top: 0%;
+          transform: rotate(0deg);
+        }
+        50%{
+          top: 0%;
+          left: 50%;
+          transform: rotate(90deg);
+        }
+        to{
+          top: 0%;
+          left: 100%;
+          transform: rotate(0deg);
+        }
+      }
+      .firkant{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: peachpuff;
+        animation: trekant 2s infinite alternate ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="firkant"></div>
+  </body>
+</html>

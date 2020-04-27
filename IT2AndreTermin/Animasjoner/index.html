@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .firkant{
+        height: 500px;
+        width: 500px;
+        background-color: blue;
+        position: relative;
+      }
+      .firkant:hover  .litenFirkant{
+        left: 0px;
+        top: 100%;
+        transform: scale(2) rotate(360);
+      }
+      .litenFirkant{
+        height: 50px;
+        width: 50px;
+        background-color: red;
+        position: absolute;
+        left: 100%;
+        top: 0%;
+        transition: 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="firkant">
+      <div class="litenFirkant">
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

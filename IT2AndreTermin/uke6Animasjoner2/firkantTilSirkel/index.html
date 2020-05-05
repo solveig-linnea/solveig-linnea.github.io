@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      @keyframes figur{
+        from{
+          transform: scale(1);
+          top: 30%;
+          left: 5%;
+        }
+        50%{
+          transform: scale(1.5);
+          background-color: yellow;
+          border-radius: 15px;
+          top: 60%;
+          left: 50%;
+        }
+        to{
+          transform: scale(3);
+          border-radius: 100px;
+          background-color: aqua;
+          top: 30%;
+          left: 80%;
+        }
+      }
+      .firkant{
+        position: absolute;
+        background-color: black;
+        width: 50px;
+        height: 50px;
+        animation: figur 1.5s infinite alternate;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="firkant"></div>
+  </body>
+</html>

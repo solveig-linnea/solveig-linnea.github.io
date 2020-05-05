@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    .firkant{
+      width: 100px;
+      height: 100px;
+      left: 15%;
+      top: 10%;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="firkant"></div>
+    <button id="btnStart" class="knapp" type="button" name="button">Start Bevegelse</button>
+    <button id="btnStopp" class="knapp" type="button" name="button">Stopp</button>
+
+    <script type="text/javascript">
+      const firkant = document.querySelector(".firkant");
+      const btnStart = document.querySelector("#btnStart");
+      const btnStopp = document.querySelector("#btnStopp");
+
+      const animasjonen = firkant.animate([
+        {
+          transform: "translateX(0) scale(1) rotate(0)",
+          backgroundColor: "blue"
+        },{
+          transform: "translateY(500px) scale(1.5) rotate(3turn)",
+          backgroundColor: "red"
+        },{
+          transform:"translateY(200px) scale(2) rotate(2turn)",
+          backgroundColor: "peachpuff"
+        }
+      ],{
+        duration: 1000,
+        iterations: Infinity,
+        direction: "alternate"
+      })
+      animasjonen.pause();
+
+      btnStart.onclick = function(){
+        animasjonen.play();
+      }
+      btnStopp.onclick = function(){
+        animasjonen.pause();
+      }
+    </script>
+  </body>
+</html>

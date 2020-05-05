@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      img{
+        width: 100px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="imgKongen" src="kongen.jpg" alt=>
+    <button id="btnStart" type="button" name="button">Start</button>
+    <button id="btnStopp" type="button" name="button">Stopp</button>
+    <br>
+    <img id="imgDronningen" src="dronningen.jpg" alt="">
+
+    <script type="text/javascript">
+    const kongen = document.querySelector("#imgKongen");
+    const dronningen = document.querySelector("#imgDronningen");
+    const btnStart = document.querySelector("#btnStart");
+    const btnStopp = document.querySelector("#btnStopp");
+
+    //Det er i milliesekunder så 1000ms = 1s.
+    //@keyframes, men i javascript
+    
+    const kongeAnimasjon = kongen.animate([
+      {
+        transform: "translateX(0) scale(1) rotate(0)",
+        backgroundColor: "blue"
+      },{
+        transform: "translateX(700px) scale(2) rotate(2turn)",
+        backgroundColor: "red"
+      },{
+        transform: "translateX(100px) scale(2) rotate(2turn)",
+        backgroundColor: "red"
+      }
+    ],{
+      duration: 1000,
+      //delay: 1000,
+      iterations: Infinity,
+      fill: "forwards",
+      direction: "alternate"
+    })
+    kongeAnimasjon.pause();
+
+    btnStart.onclick = function(){
+        kongeAnimasjon.play();//Slik som man gjør med en video
+    }
+    btnStopp.onclick = function(){
+        kongeAnimasjon.pause();//Slik som man gjør med en video
+    }
+    /*
+    const mineKeyframes = [
+    { transform: 'translateY(0px) scale(1)' },
+    { transform: 'translateY(-300px) scale(3)' }
+    ]
+    const mineOptions = {
+        duration: 1000,
+        iterations: Infinity
+    };
+
+    // Sender variablene inn i .animate funksjonene
+    kongen.animate(mineKeyframes, mineOptions);
+    dronningen.animate(mineKeyframes, mineOptions);
+    */
+
+    </script>
+  </body>
+</html>
